@@ -11,48 +11,30 @@
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
   :root{
-    /* referenced from original site: sage green, deep teal, terracotta, cream, charcoal */
-    --bg:#F4F1E8;          /* warm cream */
-    --bg-2:#E9E4D4;        /* deeper cream */
-    --surface:#FBF8F1;
-    --ink:#1F2A24;         /* deep forest charcoal */
-    --ink-soft:#33403A;
-    --muted:#6E7A6E;       /* sage-tinted neutral */
-    --line:rgba(31,42,36,.14);
-    --line-strong:rgba(31,42,36,.30);
-    --sage:#5E6E4F;        /* sage green (brand) */
-    --sage-soft:#8A9978;
-    --teal:#0F4A53;         /* deep teal */
-    --terra:#B05A36;       /* terracotta */
-    --gold:#B6862E;
-    --fire:#D4541E;
-    --serif:'Fraunces', Georgia, serif;
-    --sans:'Inter', system-ui, sans-serif;
+    --bg:#F4F1E8; --bg-2:#E9E4D4; --surface:#FBF8F1;
+    --ink:#1F2A24; --ink-soft:#33403A; --muted:#6E7A6E;
+    --line:rgba(31,42,36,.14); --line-strong:rgba(31,42,36,.30);
+    --sage:#5E6E4F; --sage-soft:#8A9978; --teal:#0F4A53;
+    --terra:#B05A36; --gold:#B6862E;
+    --serif:'Fraunces', Georgia, serif; --sans:'Inter', system-ui, sans-serif;
   }
   *{box-sizing:border-box;margin:0;padding:0}
   html{scroll-behavior:smooth}
-  body{
-    background:var(--bg);color:var(--ink);font-family:var(--sans);
-    font-weight:400;line-height:1.65;-webkit-font-smoothing:antialiased;
-    text-rendering:optimizeLegibility;overflow-x:hidden;
-  }
-  body::before{content:"";position:fixed;inset:0;pointer-events:none;z-index:9999;opacity:.04;
-    background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='180' height='180'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
-    mix-blend-mode:multiply;}
+  body{background:var(--bg);color:var(--ink);font-family:var(--sans);font-weight:400;line-height:1.65;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;overflow-x:hidden}
+  body::before{content:"";position:fixed;inset:0;pointer-events:none;z-index:9999;opacity:.04;background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='180' height='180'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");mix-blend-mode:multiply}
   ::selection{background:var(--sage);color:#fff}
   a{color:inherit;text-decoration:none}
   img{display:block;max-width:100%}
   .wrap{max-width:1320px;margin:0 auto;padding:0 32px}
   .narrow{max-width:680px}
-
   .over{font-family:var(--sans);font-size:11px;font-weight:500;letter-spacing:.22em;text-transform:uppercase;color:var(--muted)}
-  .display{font-family:var(--serif);font-weight:400;line-height:1.02;letter-spacing:-.02em;font-optical-sizing:auto}
+  .display{font-family:var(--serif);font-weight:400;line-height:1.02;letter-spacing:-.02em}
   .display em{font-style:italic;font-weight:400;color:var(--terra)}
   .serif{font-family:var(--serif)}
 
   /* TOP BAR */
   .topbar{position:fixed;top:0;left:0;right:0;z-index:300;transition:background .4s,box-shadow .4s,border-color .4s;border-bottom:1px solid transparent}
-  .topbar.scrolled{background:rgba(244,241,232,.88);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+  .topbar.scrolled{background:rgba(244,241,232,.9);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
   .topbar .wrap{display:flex;align-items:center;justify-content:space-between;height:74px}
   .brand{font-family:var(--serif);font-weight:500;font-size:18px;letter-spacing:.02em;display:flex;align-items:center;gap:10px}
   .brand svg{width:26px;height:26px}
@@ -66,11 +48,10 @@
   .burger span{width:22px;height:1.5px;background:var(--ink)}
 
   /* HERO */
-  .hero{position:relative;min-height:100vh;display:flex;align-items:flex-end;padding:120px 0 70px;overflow:hidden;
-    background:radial-gradient(120% 90% at 80% 0%,rgba(176,90,54,.08),transparent 55%),radial-gradient(90% 70% at 10% 100%,rgba(94,110,79,.12),transparent 60%),var(--bg)}
-  .hero-img{position:absolute;inset:0;z-index:0}
-  .hero-img img{width:100%;height:100%;object-fit:cover;opacity:.34}
-  .hero-veil{position:absolute;inset:0;z-index:1;pointer-events:none;background:linear-gradient(to right,rgba(244,241,232,.9) 0%,rgba(244,241,232,.4) 45%,transparent 70%),linear-gradient(to top,rgba(244,241,232,.97) 0%,transparent 42%)}
+  .hero{position:relative;min-height:100vh;display:flex;align-items:flex-end;padding:120px 0 70px;overflow:hidden;background:radial-gradient(120% 90% at 80% 0%,rgba(176,90,54,.08),transparent 55%),radial-gradient(90% 70% at 10% 100%,rgba(94,110,79,.12),transparent 60%),var(--bg)}
+  .hero-art{position:absolute;inset:0;z-index:0;opacity:.42}
+  .hero-art svg{width:100%;height:100%}
+  .hero-veil{position:absolute;inset:0;z-index:1;pointer-events:none;background:linear-gradient(to right,rgba(244,241,232,.82) 0%,transparent 50%),linear-gradient(to top,rgba(244,241,232,.96) 0%,transparent 40%)}
   .hero .wrap{position:relative;z-index:2;width:100%}
   .hero-grid{display:grid;grid-template-columns:1.4fr 1fr;gap:60px;align-items:end}
   .hero h1{font-family:var(--serif);font-weight:300;font-size:clamp(46px,7.4vw,108px);line-height:.96;letter-spacing:-.025em;max-width:12ch}
@@ -79,10 +60,8 @@
   .hero-side p{font-size:16px;line-height:1.65;color:var(--ink-soft);font-weight:300;max-width:34ch}
   .hero-actions{display:flex;gap:18px;align-items:center;flex-wrap:wrap}
   .btn{font-family:var(--sans);font-size:12px;letter-spacing:.14em;text-transform:uppercase;padding:15px 30px;border-radius:2px;transition:all .35s ease;cursor:pointer;border:none}
-  .btn-solid{background:var(--ink);color:var(--bg)}
-  .btn-solid:hover{background:var(--sage)}
-  .btn-line{background:transparent;color:var(--ink);border-bottom:1px solid var(--ink);padding:6px 0;border-radius:0}
-  .btn-line:hover{color:var(--terra);border-color:var(--terra)}
+  .btn-solid{background:var(--ink);color:var(--bg)}.btn-solid:hover{background:var(--sage)}
+  .btn-line{background:transparent;color:var(--ink);border-bottom:1px solid var(--ink);padding:6px 0;border-radius:0}.btn-line:hover{color:var(--terra);border-color:var(--terra)}
   .hero-meta{position:absolute;left:32px;bottom:30px;z-index:2;display:flex;gap:30px}
   .hero-meta div{display:flex;flex-direction:column;gap:4px}
   .hero-meta .v{font-family:var(--serif);font-size:26px;font-weight:400}
@@ -98,7 +77,6 @@
   .marquee span::after{content:"✦";color:var(--sage);font-style:normal}
   @keyframes slide{to{transform:translateX(-50%)}}
 
-  /* SECTION BASE */
   section{position:relative}
   .sec{padding:clamp(90px,12vw,150px) 0}
   .eyebrow-row{display:flex;align-items:center;gap:14px;margin-bottom:24px}
@@ -115,28 +93,42 @@
   .sig small{display:block;font-family:var(--sans);font-style:normal;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-top:6px}
 
   /* FIRE SCROLL SECTION */
-  .fire{position:relative;min-height:160vh;background:var(--ink);overflow:hidden}
+  .fire{position:relative;height:240vh;background:#0b0f0c;overflow:hidden}
   .fire-sticky{position:sticky;top:0;height:100vh;overflow:hidden;display:flex;align-items:center}
   .fire-bg{position:absolute;inset:0;z-index:0}
-  .fire-bg img{width:100%;height:100%;object-fit:cover}
-  .fire-bg .scorch{position:absolute;inset:0;background:linear-gradient(to bottom,rgba(31,42,36,.55),rgba(31,42,36,.2) 40%,rgba(31,42,36,.7));mix-blend-mode:multiply}
-  .flames{position:absolute;inset:0;z-index:2;pointer-events:none;mix-blend-mode:screen}
-  .flames svg{width:100%;height:100%}
-  .smoke{position:absolute;inset:0;z-index:3;pointer-events:none;background:radial-gradient(60% 50% at 50% 70%,rgba(120,120,120,0) 0%,rgba(120,120,120,0) 100%)}
-  .fire-content{position:relative;z-index:5;color:#F4F1E8;max-width:560px;padding:0 32px}
-  .fire-content::before{content:"";position:absolute;inset:-10px -10px -10px -10px;z-index:-1;background:linear-gradient(to right,rgba(10,16,12,.82),rgba(10,16,12,.35) 80%,transparent);border-radius:4px;pointer-events:none}
-  .fire-content .over{color:rgba(244,241,232,.6)}
-  .fire-content h2{font-family:var(--serif);font-weight:400;font-size:clamp(34px,5vw,64px);line-height:1.04;letter-spacing:-.02em;margin:18px 0 24px;max-width:14ch;text-shadow:0 2px 24px rgba(0,0,0,.5)}
+  .fire-bg img{width:100%;height:100%;object-fit:cover;filter:saturate(.85) brightness(.6)}
+  .fire-bg .scorch{position:absolute;inset:0;background:linear-gradient(to bottom,rgba(8,12,9,.5),rgba(8,12,9,.2) 35%,rgba(8,12,9,.78));mix-blend-mode:multiply}
+  /* the ground line where fire sits */
+  .ground{position:absolute;left:0;right:0;bottom:0;height:30vh;z-index:1;background:linear-gradient(to top,rgba(8,12,9,.95),transparent);pointer-events:none}
+  /* flames: tall tongues, flicker, scroll-shrinks height */
+  .flames{position:absolute;left:0;right:0;bottom:0;height:62vh;z-index:2;pointer-events:none;mix-blend-mode:screen;transform-origin:bottom center;will-change:transform,opacity}
+  .flames svg{width:100%;height:100%;display:block}
+  .flames .tongue{transform-origin:bottom center;animation:flick .5s ease-in-out infinite alternate}
+  .flames .tongue:nth-child(2n){animation-duration:.7s;animation-delay:-.2s}
+  .flames .tongue:nth-child(3n){animation-duration:.6s;animation-delay:-.35s}
+  .flames .tongue:nth-child(5n){animation-duration:.8s;animation-delay:-.1s}
+  @keyframes flick{0%{transform:scaleY(1) scaleX(1) rotate(-1deg)}100%{transform:scaleY(1.12) scaleX(.96) rotate(1deg)}}
+  /* ember particles */
+  .embers{position:absolute;inset:0;z-index:3;pointer-events:none;overflow:hidden}
+  .ember{position:absolute;bottom:28vh;width:4px;height:4px;border-radius:50%;background:#FFD37A;box-shadow:0 0 8px 2px rgba(255,180,80,.7);animation:rise linear infinite;opacity:0}
+  @keyframes rise{0%{transform:translateY(0) translateX(0);opacity:0}10%{opacity:1}80%{opacity:.8}100%{transform:translateY(-70vh) translateX(var(--drift,0));opacity:0}}
+  /* smoldering embers bed (shown when fire low) */
+  .embers-bed{position:absolute;left:0;right:0;bottom:0;height:14vh;z-index:2;background:radial-gradient(60% 100% at 50% 100%,rgba(255,90,30,.5),transparent 70%);opacity:0;mix-blend-mode:screen}
+  /* cleared green forest */
+  .fire-cleared{position:absolute;inset:0;z-index:1;opacity:0;background:radial-gradient(120% 90% at 50% 30%,#33502f 0%,#243a26 45%,#16241a 100%)}
+  .fire-cleared svg{position:absolute;left:0;right:0;bottom:0;width:100%;height:50vh}
+  .fire-content{position:relative;z-index:6;color:#F4F1E8;max-width:560px;padding:0 32px}
+  .fire-content::before{content:"";position:absolute;inset:-12px -16px -12px -16px;z-index:-1;background:linear-gradient(105deg,rgba(6,10,7,.86),rgba(6,10,7,.3) 82%,transparent);border-radius:6px;pointer-events:none}
+  .fire-content .over{color:rgba(244,241,232,.62)}
+  .fire-content h2{font-family:var(--serif);font-weight:400;font-size:clamp(34px,5vw,60px);line-height:1.04;letter-spacing:-.02em;margin:18px 0 24px;max-width:15ch}
   .fire-content h2 em{font-style:italic;color:#F2A65A}
-  .fire-content p{color:rgba(244,241,232,.85);font-weight:300;font-size:17px;line-height:1.7;max-width:44ch;text-shadow:0 1px 12px rgba(0,0,0,.4)}
-  .fire-meter{position:absolute;right:40px;top:50%;transform:translateY(-50%);z-index:5;display:flex;flex-direction:column;gap:10px;align-items:center}
-  .fire-meter .track{width:2px;height:200px;background:rgba(244,241,232,.2);position:relative;border-radius:2px;overflow:hidden}
-  .fire-meter .fill{position:absolute;left:0;bottom:0;width:100%;background:linear-gradient(to top,#F2A65A,#D4541E);height:100%}
+  .fire-content p{color:rgba(244,241,232,.86);font-weight:300;font-size:17px;line-height:1.7;max-width:44ch}
+  .fire-meter{position:absolute;right:44px;top:50%;transform:translateY(-50%);z-index:6;display:flex;flex-direction:column;gap:12px;align-items:center}
+  .fire-meter .track{width:3px;height:220px;background:rgba(244,241,232,.16);position:relative;border-radius:3px;overflow:hidden}
+  .fire-meter .fill{position:absolute;left:0;bottom:0;width:100%;background:linear-gradient(to top,#D4541E,#F2A65A,#FFE08A);height:100%;transition:height .1s linear}
   .fire-meter .label{font-size:9px;letter-spacing:.18em;text-transform:uppercase;color:rgba(244,241,232,.55);writing-mode:vertical-rl}
-  .fire-meter .out{font-family:var(--serif);font-size:13px;color:#F2A65A}
-  .fire-cleared{position:absolute;inset:0;z-index:1;opacity:0;background:radial-gradient(120% 100% at 50% 100%,rgba(94,110,79,.5),transparent 60%),linear-gradient(to bottom,#1F2A24,#0F1A14)}
-  .fire-cleared .green{position:absolute;left:50%;bottom:0;width:120%;height:55%;transform:translateX(-50%)}
-  .fire-cleared svg{width:100%;height:100%}
+  .fire-meter .out{font-family:var(--serif);font-size:15px;color:#F2A65A;letter-spacing:.02em}
+  .fire-meter .cap{font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:rgba(244,241,232,.5)}
 
   /* PROCESS */
   .process h2{font-family:var(--serif);font-weight:300;font-size:clamp(32px,4vw,52px);letter-spacing:-.02em;line-height:1.05;max-width:16ch;margin-bottom:8px}
@@ -150,7 +142,7 @@
   .step .ico{height:84px;display:flex;align-items:center;margin-bottom:24px}
   .step .ico svg{width:54px;height:54px;stroke:var(--sage);stroke-width:1;fill:none}
 
-  /* CATEGORY SECTIONS (distinct character) */
+  /* CATEGORY SECTIONS */
   .cat{padding:clamp(90px,11vw,140px) 0;position:relative;overflow:hidden}
   .cat-head{display:flex;justify-content:space-between;align-items:flex-end;gap:30px;margin-bottom:54px;flex-wrap:wrap}
   .cat-head h2{font-family:var(--serif);font-weight:300;font-size:clamp(36px,4.4vw,60px);letter-spacing:-.02em;line-height:1.02;max-width:14ch}
@@ -159,48 +151,57 @@
   .cat-num{position:absolute;top:60px;right:60px;font-family:var(--serif);font-size:13px;color:var(--muted);letter-spacing:.1em;display:flex;align-items:center;gap:10px}
   .cat-num .line{width:30px;height:1px;background:var(--line-strong)}
 
-  /* CAT 1 — Drinkware: warm cream, light editorial */
+  /* product cards (premium CSS) */
+  .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  .pcard{position:relative;border-radius:2px;overflow:hidden;border:1px solid var(--line);background:var(--surface);min-height:340px;display:flex;flex-direction:column;justify-content:flex-end;padding:26px;transition:transform .5s cubic-bezier(.2,.8,.2,1)}
+  .pcard:hover{transform:translateY(-6px)}
+  .pcard .pic{position:absolute;inset:0;z-index:0}
+  .pcard .pic img{width:100%;height:100%;object-fit:cover;transition:transform 1s ease}
+  .pcard:hover .pic img{transform:scale(1.04)}
+  .pcard .pic svg{width:100%;height:100%}
+  .pcard .shade{position:absolute;inset:0;z-index:1;background:linear-gradient(to top,rgba(20,16,12,.86) 0%,rgba(20,16,12,.4) 45%,rgba(20,16,12,.05) 78%,transparent)}
+  .pcard .ct{position:relative;z-index:2;color:#F4F1E8}
+  .pcard .ct .over{color:rgba(244,241,232,.7)}
+  .pcard .ct h4{font-family:var(--serif);font-weight:500;font-size:21px;letter-spacing:-.01em;margin:6px 0 6px}
+  .pcard .ct p{font-size:13px;color:rgba(244,241,232,.78);font-weight:300;line-height:1.5}
+  .pcard .price{position:absolute;top:20px;right:20px;z-index:3;font-family:var(--serif);font-size:13px;color:#F4F1E8;background:rgba(20,16,12,.45);backdrop-filter:blur(6px);padding:5px 12px;border-radius:40px}
+
+  /* CAT 1 — Drinkware: cream */
   .cat-drink{background:var(--bg)}
-  .cat-drink .gallery{display:grid;grid-template-columns:1fr 1fr;gap:24px}
-  .shot{position:relative;overflow:hidden;border-radius:2px;background:var(--surface);border:1px solid var(--line)}
-  .shot img{width:100%;height:100%;object-fit:cover;transition:transform 1s cubic-bezier(.2,.8,.2,1);min-height:340px}
-  .shot:hover img{transform:scale(1.04)}
-  .shot .cap{position:absolute;left:0;right:0;bottom:0;padding:22px 24px;display:flex;justify-content:space-between;align-items:flex-end;background:linear-gradient(to top,rgba(31,42,36,.7),transparent);color:#F4F1E8}
-  .shot .cap h4{font-family:var(--serif);font-weight:500;font-size:20px}
-  .shot .cap .p{font-family:var(--sans);font-size:13px;color:rgba(244,241,232,.8)}
   .pills{display:flex;gap:10px;flex-wrap:wrap;margin-top:30px}
-  .pill{font-size:12px;letter-spacing:.04em;color:var(--ink-soft);border:1px solid var(--line-strong);padding:8px 16px;border-radius:40px;transition:all .3s}
+  .pill{font-size:12px;letter-spacing:.04em;color:var(--ink-soft);border:1px solid var(--line-strong);padding:8px 16px;border-radius:40px;transition:all .3s;cursor:pointer}
   .pill:hover{background:var(--ink);color:var(--bg);border-color:var(--ink)}
 
-  /* CAT 2 — Serveware: deep teal backdrop */
+  /* CAT 2 — Serveware: deep teal */
   .cat-serve{background:var(--teal);color:#E8EDE5}
   .cat-serve .over{color:rgba(232,237,229,.55)}
   .cat-serve h2 em{color:#E8B65A}
   .cat-serve .lede{color:rgba(232,237,229,.7)}
   .cat-serve .cat-num{color:rgba(232,237,229,.5)}
   .cat-serve .cat-num .line{background:rgba(232,237,229,.3)}
-  .serve-grid{display:grid;grid-template-columns:1.4fr 1fr;gap:24px}
-  .serve-grid .shot{background:#0d3a42;border-color:rgba(232,237,229,.14)}
-  .serve-grid .shot .cap{background:linear-gradient(to top,rgba(13,40,46,.85),transparent)}
-  .serve-facts{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:rgba(232,237,229,.14);margin-top:30px;border:1px solid rgba(232,237,229,.14)}
-  .serve-facts div{background:var(--teal);padding:24px}
-  .serve-facts h5{font-family:var(--serif);font-size:18px;margin-bottom:6px;color:#E8B65A}
-  .serve-facts p{font-size:13px;color:rgba(232,237,229,.7);font-weight:300;line-height:1.5}
+  .cat-serve .pcard{background:#0d3a42;border-color:rgba(232,237,229,.14)}
+  .cat-serve .pcard .shade{background:linear-gradient(to top,rgba(13,40,46,.9) 0%,rgba(13,40,46,.3) 50%,transparent)}
+  .serve-facts{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:rgba(232,237,229,.14);margin-top:30px;border:1px solid rgba(232,237,229,.14)}
+  .serve-facts div{background:var(--teal);padding:22px}
+  .serve-facts h5{font-family:var(--serif);font-size:16px;margin-bottom:5px;color:#E8B65A}
+  .serve-facts p{font-size:12px;color:rgba(232,237,229,.7);font-weight:300;line-height:1.5}
 
-  /* CAT 3 — Honey: warm amber/terracotta, jars */
-  .cat-honey{background:linear-gradient(180deg,#F4F1E8,#EFE6D6)}
+  /* CAT 3 — Honey: warm amber */
+  .cat-honey{background:linear-gradient(180deg,#F4F1E8,#EFE2CE)}
   .honey-wrap{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
-  .honey-visual{position:relative}
-  .honey-visual .shot img{min-height:480px}
-  .honey-visual .tag{position:absolute;top:20px;left:20px;background:var(--terra);color:#fff;font-family:var(--serif);font-style:italic;font-size:15px;padding:8px 16px;border-radius:40px}
+  .honey-visual{position:relative;border-radius:2px;overflow:hidden;min-height:480px;background:radial-gradient(80% 70% at 50% 40%,#E8C36A,#B6862E 70%,#8A5A1E);display:flex;align-items:center;justify-content:center}
+  .honey-visual .jar{width:160px;height:200px;position:relative}
+  .honey-visual .jar svg{width:100%;height:100%}
+  .honey-visual .tag{position:absolute;top:18px;left:18px;background:var(--terra);color:#fff;font-family:var(--serif);font-style:italic;font-size:14px;padding:7px 14px;border-radius:40px}
   .honey-list{display:flex;flex-direction:column;gap:0;border-top:1px solid var(--line)}
-  .honey-item{display:grid;grid-template-columns:40px 1fr auto;gap:16px;padding:22px 0;border-bottom:1px solid var(--line);align-items:center}
+  .honey-item{display:grid;grid-template-columns:40px 1fr auto;gap:16px;padding:22px 0;border-bottom:1px solid var(--line);align-items:center;transition:padding-left .3s}
+  .honey-item:hover{padding-left:8px}
   .honey-item .hn{font-family:var(--serif);font-style:italic;color:var(--terra)}
-  .honey-item h4{font-family:var(--serif);font-weight:500;font-size:20px;margin-bottom:2px}
+  .honey-item h4{font-family:var(--serif);font-weight:500;font-size:19px;margin-bottom:2px}
   .honey-item p{font-size:13px;color:var(--muted);font-weight:300}
-  .honey-item .price{font-family:var(--serif);font-size:18px;color:var(--ink)}
+  .honey-item .price{font-family:var(--serif);font-size:17px;color:var(--ink)}
 
-  /* CAT 4 — Perfume: dark, intimate, candlelit */
+  /* CAT 4 — Perfume: dark */
   .cat-perfume{background:#1A1410;color:#EDE3D6}
   .cat-perfume .over{color:rgba(237,227,214,.5)}
   .cat-perfume h2 em{color:#D9A86A}
@@ -208,10 +209,10 @@
   .cat-perfume .cat-num{color:rgba(237,227,214,.45)}
   .cat-perfume .cat-num .line{background:rgba(237,227,214,.3)}
   .perfume-wrap{display:grid;grid-template-columns:1fr 1.1fr;gap:60px;align-items:center}
-  .perfume-visual{position:relative;border-radius:2px;overflow:hidden;border:1px solid rgba(237,227,214,.14)}
-  .perfume-visual img{width:100%;height:100%;object-fit:cover;min-height:480px;transition:transform 1.2s ease}
-  .perfume-visual:hover img{transform:scale(1.05)}
-  .perfume-visual .glow{position:absolute;inset:0;pointer-events:none;background:radial-gradient(50% 40% at 50% 40%,rgba(217,168,106,.25),transparent 70%)}
+  .perfume-visual{position:relative;border-radius:2px;overflow:hidden;min-height:480px;background:radial-gradient(60% 50% at 50% 45%,rgba(217,168,106,.22),transparent 70%),#221A14;display:flex;align-items:center;justify-content:center;border:1px solid rgba(237,227,214,.12)}
+  .perfume-visual .bottle{width:140px;height:240px;animation:float 6s ease-in-out infinite}
+  @keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}
+  .perfume-visual .bottle svg{width:100%;height:100%}
   .perfume-notes{display:flex;flex-direction:column;gap:18px}
   .note{display:grid;grid-template-columns:70px 1fr;gap:18px;padding-bottom:18px;border-bottom:1px solid rgba(237,227,214,.12)}
   .note:last-child{border-bottom:none}
@@ -219,7 +220,7 @@
   .note h4{font-family:var(--serif);font-weight:500;font-size:20px;margin-bottom:4px}
   .note p{font-size:14px;color:rgba(237,227,214,.7);font-weight:300;line-height:1.6}
 
-  /* IMPACT QUOTE */
+  /* IMPACT */
   .impact{background:var(--bg-2)}
   .impact .wrap.narrow{text-align:center}
   .impact blockquote{font-family:var(--serif);font-weight:300;font-style:italic;font-size:clamp(26px,3.2vw,42px);line-height:1.3;letter-spacing:-.01em;margin:0 auto;max-width:24ch}
@@ -242,8 +243,7 @@
   footer{background:var(--ink);color:var(--bg);padding:80px 0 36px}
   .foot-top{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:50px;padding-bottom:60px;border-bottom:1px solid rgba(244,241,232,.14)}
   .foot-brand{display:flex;flex-direction:column;gap:18px}
-  .foot-brand .brand{color:var(--bg)}
-  .foot-brand .brand svg{stroke:var(--bg)}
+  .foot-brand .brand{color:var(--bg)}.foot-brand .brand svg{stroke:var(--bg)}
   .foot-brand p{color:rgba(244,241,232,.6);font-weight:300;font-size:14px;max-width:34ch;line-height:1.6}
   .foot-col h5{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:rgba(244,241,232,.5);margin-bottom:18px;font-weight:500}
   .foot-col a{display:block;font-size:14px;color:rgba(244,241,232,.82);padding:6px 0;font-weight:300;transition:color .3s}
@@ -259,35 +259,27 @@
 
   @media(max-width:980px){
     .nav{display:none}.burger{display:flex}
-    .hero-grid{grid-template-columns:1fr;gap:40px}
-    .hero-meta,.scroll-cue{display:none}
+    .hero-grid{grid-template-columns:1fr;gap:40px}.hero-meta,.scroll-cue{display:none}
     .manifesto .wrap{grid-template-columns:1fr;gap:48px}
-    .steps{grid-template-columns:1fr 1fr}
-    .step{border-right:none;border-bottom:1px solid var(--line);padding:32px 20px}
-    .serve-grid,.honey-wrap,.perfume-wrap{grid-template-columns:1fr;gap:32px}
-    .cat-drink .gallery{grid-template-columns:1fr}
-    .fire-meter{display:none}
-    .fire-content{max-width:90%}
-    .foot-top{grid-template-columns:1fr 1fr;gap:36px}
-    .cat-num{top:40px;right:32px}
+    .steps{grid-template-columns:1fr 1fr}.step{border-right:none;border-bottom:1px solid var(--line);padding:32px 20px}
+    .cards{grid-template-columns:1fr 1fr}
+    .honey-wrap,.perfume-wrap{grid-template-columns:1fr;gap:32px}
+    .fire-meter{display:none}.fire-content{max-width:90%}
+    .foot-top{grid-template-columns:1fr 1fr;gap:36px}.cat-num{top:40px;right:32px}
+    .serve-facts{grid-template-columns:1fr 1fr}
   }
   @media(max-width:600px){
-    .wrap{padding:0 22px}
-    .steps{grid-template-columns:1fr}
-    .foot-top{grid-template-columns:1fr}
-    .serve-facts{grid-template-columns:1fr}
+    .wrap{padding:0 22px}.steps{grid-template-columns:1fr}.foot-top{grid-template-columns:1fr}
+    .cards{grid-template-columns:1fr}.serve-facts{grid-template-columns:1fr}
   }
 </style>
 </head>
 <body>
 
-<!-- TOP BAR -->
 <header class="topbar" id="topbar">
   <div class="wrap">
     <a href="#" class="brand">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.1">
-        <path d="M12 2 L12 22"/><path d="M12 4 L7 8 M12 4 L17 8"/><path d="M12 9 L6 14 M12 9 L18 14"/><path d="M12 14 L5 19 M12 14 L19 19"/>
-      </svg>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.1"><path d="M12 2 L12 22"/><path d="M12 4 L7 8 M12 4 L17 8"/><path d="M12 9 L6 14 M12 9 L18 14"/><path d="M12 14 L5 19 M12 14 L19 19"/></svg>
       Himalayan Pine Co.
     </a>
     <nav class="nav">
@@ -305,7 +297,19 @@
 
 <!-- HERO -->
 <section class="hero" id="hero">
-  <div class="hero-img" aria-hidden="true"><img src="assets/hero-collection.jpg" alt="" /></div>
+  <div class="hero-art" aria-hidden="true">
+    <svg viewBox="0 0 1600 900" preserveAspectRatio="xMidYMid slice">
+      <defs><linearGradient id="hg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#E9E1CE"/><stop offset="1" stop-color="#F4F1E8"/></linearGradient></defs>
+      <rect width="1600" height="900" fill="url(#hg)"/>
+      <g stroke="#5E6E4F" stroke-width="1.1" fill="none" opacity=".55">
+        <g transform="translate(1180,120) rotate(18)"><path d="M0 0 L-120 360"/><path d="M0 0 L-150 340"/><path d="M0 0 L-90 380"/><path d="M0 0 L-170 320"/><path d="M0 0 L-60 390"/></g>
+        <g transform="translate(1320,200) rotate(-10)"><path d="M0 0 L130 420"/><path d="M0 0 L90 440"/><path d="M0 0 L160 400"/><path d="M0 0 L60 460"/></g>
+        <g transform="translate(220,520) rotate(8)"><path d="M0 0 L-140 380"/><path d="M0 0 L-100 400"/><path d="M0 0 L-170 360"/><path d="M0 0 L-70 420"/></g>
+        <g transform="translate(380,300) rotate(-22)"><path d="M0 0 L150 400"/><path d="M0 0 L110 420"/><path d="M0 0 L180 380"/></g>
+      </g>
+      <g stroke="#B05A36" stroke-width="1" fill="none" opacity=".2"><g transform="translate(900,180) rotate(24)"><path d="M0 0 L-110 320"/><path d="M0 0 L-140 300"/><path d="M0 0 L-80 340"/></g></g>
+    </svg>
+  </div>
   <div class="hero-veil" aria-hidden="true"></div>
   <div class="wrap">
     <div class="hero-grid">
@@ -317,7 +321,7 @@
         <p>We gather fallen Himalayan pine needles — the leading cause of forest fires — and press them into unbreakable, plastic-free drinkware, serveware, raw honey and botanical perfume.</p>
         <div class="hero-actions">
           <a href="#drinkware" class="btn btn-solid">Explore the Catalogue</a>
-          <a href="#story" class="btn btn-line">Read the story →</a>
+          <a href="#fire" class="btn btn-line">Watch it burn out →</a>
         </div>
       </div>
     </div>
@@ -327,7 +331,7 @@
     <div><span class="v">2024</span><span class="k">Founded · Dharamshala</span></div>
     <div><span class="v">0</span><span class="k">Trees cut</span></div>
   </div>
-  <div class="scroll-cue">Scroll to watch it burn out</div>
+  <div class="scroll-cue">Scroll to put it out</div>
 </section>
 
 <!-- MARQUEE -->
@@ -338,7 +342,7 @@
   </div>
 </div>
 
-<!-- MANIFESTO / STORY -->
+<!-- MANIFESTO -->
 <section class="sec manifesto" id="story">
   <div class="wrap">
     <div class="reveal">
@@ -363,46 +367,72 @@
       <div class="scorch"></div>
     </div>
     <div class="fire-cleared" id="fireCleared" aria-hidden="true">
-      <div class="green">
-        <svg viewBox="0 0 1600 500" preserveAspectRatio="xMidYMax slice">
-          <path d="M0 500 L0 320 Q200 240 380 300 Q520 350 700 280 Q880 210 1060 290 Q1240 360 1420 300 Q1540 270 1600 290 L1600 500 Z" fill="#2E3D2A"/>
-          <path d="M0 500 L0 380 Q220 320 420 360 Q620 400 820 340 Q1000 290 1200 350 Q1400 400 1600 360 L1600 500 Z" fill="#1F2A24"/>
-          <g stroke="#5E6E4F" stroke-width="1" fill="none" opacity=".7">
-            <path d="M120 360 L120 300 M120 320 L100 340 M120 320 L140 340"/>
-            <path d="M320 360 L320 290 M320 310 L300 330 M320 310 L340 330"/>
-            <path d="M520 360 L520 280 M520 300 L500 320 M520 300 L540 320"/>
-            <path d="M760 350 L760 285 M760 305 L740 325 M760 305 L780 325"/>
-            <path d="M980 360 L980 290 M980 310 L960 330 M980 310 L1000 330"/>
-            <path d="M1200 360 L1200 295 M1200 315 L1180 335 M1200 315 L1220 335"/>
-            <path d="M1420 360 L1420 290 M1420 310 L1400 330 M1420 310 L1440 330"/>
-          </g>
-        </svg>
-      </div>
-    </div>
-    <div class="flames" id="flames" aria-hidden="true">
-      <svg viewBox="0 0 1600 900" preserveAspectRatio="xMidYMax slice">
-        <defs>
-          <radialGradient id="fg" cx="50%" cy="100%" r="60%">
-            <stop offset="0" stop-color="#FFE08A" stop-opacity=".9"/>
-            <stop offset=".4" stop-color="#F2A65A" stop-opacity=".7"/>
-            <stop offset=".75" stop-color="#D4541E" stop-opacity=".5"/>
-            <stop offset="1" stop-color="#D4541E" stop-opacity="0"/>
-          </radialGradient>
-        </defs>
-        <path id="flamePath" d="M0 900 L0 560 Q120 520 200 480 Q260 560 360 500 Q420 580 520 520 Q600 600 720 510 Q820 600 920 520 Q1000 600 1120 510 Q1200 600 1320 520 Q1400 580 1520 500 Q1560 540 1600 560 L1600 900 Z" fill="url(#fg)"/>
-        <path id="flamePath2" d="M0 900 L0 640 Q160 600 280 560 Q380 640 480 580 Q600 660 760 590 Q900 660 1060 580 Q1180 660 1340 590 Q1460 640 1600 620 L1600 900 Z" fill="#F2A65A" opacity=".4"/>
+      <svg viewBox="0 0 1600 420" preserveAspectRatio="xMidYMax slice">
+        <path d="M0 420 L0 280 Q200 210 380 270 Q520 320 700 250 Q880 180 1060 260 Q1240 330 1420 270 Q1540 240 1600 260 L1600 420 Z" fill="#2E3D2A"/>
+        <path d="M0 420 L0 340 Q220 280 420 320 Q620 360 820 300 Q1000 250 1200 310 Q1400 360 1600 320 L1600 420 Z" fill="#1F2A24"/>
+        <g stroke="#7C8F6A" stroke-width="1.1" fill="none" opacity=".8">
+          <path d="M120 330 L120 250 M120 280 L100 300 M120 280 L140 300"/>
+          <path d="M320 330 L320 240 M320 270 L300 290 M320 270 L340 290"/>
+          <path d="M520 330 L520 230 M520 260 L500 280 M520 260 L540 280"/>
+          <path d="M760 320 L760 245 M760 275 L740 295 M760 275 L780 295"/>
+          <path d="M980 330 L980 250 M980 280 L960 300 M980 280 L1000 300"/>
+          <path d="M1200 330 L1200 255 M1200 285 L1180 305 M1200 285 L1220 305"/>
+          <path d="M1420 330 L1420 250 M1420 280 L1400 300 M1420 280 L1440 300"/>
+        </g>
       </svg>
     </div>
-    <div class="smoke" id="smoke" aria-hidden="true"></div>
+    <div class="ground" aria-hidden="true"></div>
+
+    <div class="flames" id="flames" aria-hidden="true">
+      <svg viewBox="0 0 1600 620" preserveAspectRatio="none">
+        <defs>
+          <linearGradient id="flameGrad" x1="0" y1="1" x2="0" y2="0">
+            <stop offset="0" stop-color="#D4541E"/><stop offset=".35" stop-color="#F2A65A"/>
+            <stop offset=".7" stop-color="#FFD37A"/><stop offset="1" stop-color="#FFEFC0" stop-opacity=".6"/>
+          </linearGradient>
+          <radialGradient id="flameGlow" cx="50%" cy="100%" r="60%">
+            <stop offset="0" stop-color="#FFD37A" stop-opacity=".55"/><stop offset="1" stop-color="#FFD37A" stop-opacity="0"/>
+          </radialGradient>
+        </defs>
+        <ellipse cx="800" cy="620" rx="900" ry="320" fill="url(#flameGlow)"/>
+        <g class="tongue" fill="url(#flameGrad)">
+          <path d="M120 620 C120 520 90 470 110 360 C130 300 150 240 130 180 C150 220 170 280 170 340 C190 300 180 420 150 470 C150 540 140 580 120 620 Z"/>
+        </g>
+        <g class="tongue" fill="url(#flameGrad)">
+          <path d="M300 620 C300 540 260 480 280 400 C260 330 300 260 290 200 C320 260 330 320 330 380 C360 330 350 460 320 520 C320 560 310 600 300 620 Z"/>
+        </g>
+        <g class="tongue" fill="url(#flameGrad)">
+          <path d="M520 620 C520 500 480 440 500 340 C480 270 530 200 510 140 C550 210 560 280 560 360 C590 300 580 440 540 500 C540 560 530 600 520 620 Z"/>
+        </g>
+        <g class="tongue" fill="url(#flameGrad)">
+          <path d="M760 620 C760 520 720 460 740 360 C720 300 770 240 750 180 C800 250 800 320 800 390 C830 330 820 470 780 530 C780 570 770 600 760 620 Z"/>
+        </g>
+        <g class="tongue" fill="url(#flameGrad)">
+          <path d="M1000 620 C1000 510 960 450 980 350 C960 280 1010 210 990 150 C1030 220 1040 290 1040 370 C1070 310 1060 450 1020 510 C1020 560 1010 600 1000 620 Z"/>
+        </g>
+        <g class="tongue" fill="url(#flameGrad)">
+          <path d="M1240 620 C1240 530 1200 470 1220 380 C1200 310 1250 250 1230 190 C1270 260 1280 330 1280 400 C1310 350 1300 480 1260 540 C1260 580 1250 600 1240 620 Z"/>
+        </g>
+        <g class="tongue" fill="url(#flameGrad)">
+          <path d="M1460 620 C1460 520 1420 460 1440 360 C1420 300 1470 240 1450 180 C1490 250 1490 320 1490 390 C1520 340 1510 470 1470 530 C1470 570 1460 600 1460 620 Z"/>
+        </g>
+      </svg>
+    </div>
+
+    <div class="embers-bed" id="embersBed" aria-hidden="true"></div>
+    <div class="embers" id="embers" aria-hidden="true"></div>
+
     <div class="fire-content">
       <div class="over">03 · Why it matters</div>
       <h2>Every cup is a <em>fire</em> that didn't happen.</h2>
-      <p>Scroll down. Watch the fire on the forest floor die as the needles are lifted — cleared by hand, kilo by kilo. This is the work your purchase funds: the most direct intervention against Himalayan wildfire.</p>
+      <p>Scroll down slowly. Watch the fire on the forest floor die as the needles are lifted — cleared by hand, kilo by kilo. This is the work your purchase funds: the most direct intervention against Himalayan wildfire.</p>
+      <p id="fireEnd" style="margin-top:22px;font-family:var(--serif);font-style:italic;font-size:18px;color:#B9D49E;opacity:0;transition:opacity .6s ease">The floor is cleared. The forest breathes. One cup at a time.</p>
     </div>
     <div class="fire-meter">
       <span class="out" id="firePct">100%</span>
       <div class="track"><div class="fill" id="fireFill"></div></div>
       <span class="label">Fire remaining</span>
+      <span class="cap" id="fireCap">Burning</span>
     </div>
   </div>
 </section>
@@ -418,23 +448,19 @@
     <div class="steps">
       <div class="step reveal">
         <div class="ico"><svg viewBox="0 0 48 48"><path d="M24 6 L24 30 M24 12 L16 20 M24 12 L32 20 M24 20 L14 30 M24 20 L34 30 M18 38 C18 42 30 42 30 38"/></svg></div>
-        <div class="n">01</div><h3>Gathered</h3>
-        <p>Before fire season, Mahila Mandals hand-pick fallen needles from the forest floor — clearing the mountain as they work.</p>
+        <div class="n">01</div><h3>Gathered</h3><p>Before fire season, Mahila Mandals hand-pick fallen needles from the forest floor — clearing the mountain as they work.</p>
       </div>
       <div class="step reveal" style="transition-delay:.08s">
         <div class="ico"><svg viewBox="0 0 48 48"><path d="M10 14 L38 14 L34 40 L14 40 Z M16 14 C16 8 32 8 32 14"/></svg></div>
-        <div class="n">02</div><h3>Bound</h3>
-        <p>Needles are combined with natural limestone and clay — never resin glues — and prepared for moulding.</p>
+        <div class="n">02</div><h3>Bound</h3><p>Needles are combined with natural limestone and clay — never resin glues — and prepared for moulding.</p>
       </div>
       <div class="step reveal" style="transition-delay:.16s">
         <div class="ico"><svg viewBox="0 0 48 48"><rect x="12" y="14" width="24" height="22" rx="3"/><path d="M12 22 L36 22 M24 14 L24 36"/></svg></div>
-        <div class="n">03</div><h3>Pressed</h3>
-        <p>A patented injection process forms each vessel, extinguishing flammability while keeping natural antimicrobial qualities.</p>
+        <div class="n">03</div><h3>Pressed</h3><p>A patented injection process forms each vessel, extinguishing flammability while keeping natural antimicrobial qualities.</p>
       </div>
       <div class="step reveal" style="transition-delay:.24s">
         <div class="ico"><svg viewBox="0 0 48 48"><path d="M14 16 L14 36 C14 40 34 40 34 36 L34 16 Z M24 16 L24 36 M14 24 L34 24"/></svg></div>
-        <div class="n">04</div><h3>Kept</h3>
-        <p>Lightweight, unbreakable, microwave-safe — made to be used daily and to return to the earth when finally done.</p>
+        <div class="n">04</div><h3>Kept</h3><p>Lightweight, unbreakable, microwave-safe — made to be used daily and to return to the earth when finally done.</p>
       </div>
     </div>
   </div>
@@ -448,16 +474,42 @@
       <h2>Drinkware, <em>unbreakable</em> by nature.</h2>
       <p class="lede">Chai cups, sippers and wine glasses pressed from pine — matte, light, microwave-safe. Built to outlive the kitchen.</p>
     </div>
-    <div class="gallery">
-      <div class="shot reveal"><img src="assets/drinkware-mugs.jpg" alt="Pine needle chai cutting cups stacked" />
-        <div class="cap"><h4>Engraved Chai Cutting Cups</h4><span class="p">Pack of 6 · ₹999</span></div>
+    <div class="cards">
+      <div class="pcard reveal">
+        <div class="pic"><img src="assets/drinkware-wine.jpg" alt="Pine needle wine glass" /></div>
+        <div class="shade"></div>
+        <span class="price">₹599</span>
+        <div class="ct"><span class="over">Pine Composite</span><h4>Pine Needle Wine Glass</h4><p>Charcoal grey · 250ml · set of 2</p></div>
       </div>
-      <div class="shot reveal" style="transition-delay:.08s"><img src="assets/drinkware-wine.jpg" alt="Pine needle wine glass" />
-        <div class="cap"><h4>Pine Needle Wine Glass</h4><span class="p">₹599</span></div>
+      <div class="pcard reveal" style="transition-delay:.06s">
+        <div class="pic" aria-hidden="true">
+          <svg viewBox="0 0 400 400" preserveAspectRatio="xMidYMid slice"><rect width="400" height="400" fill="#E9E4D4"/>
+          <g stroke="#5E6E4F" stroke-width="2" fill="none">
+            <ellipse cx="200" cy="150" rx="70" ry="18" fill="#EDE7D6"/>
+            <path d="M170 150 L180 320 Q200 350 220 320 L230 150" fill="#EDE7D6"/>
+            <ellipse cx="200" cy="350" rx="50" ry="12" fill="#DDD5BF"/>
+          </g></svg>
+        </div>
+        <div class="shade"></div>
+        <span class="price">₹999</span>
+        <div class="ct"><span class="over">Pine Composite</span><h4>Eco Chai Cutting Cups</h4><p>Pack of 6 · sage & beige</p></div>
+      </div>
+      <div class="pcard reveal" style="transition-delay:.12s">
+        <div class="pic" aria-hidden="true">
+          <svg viewBox="0 0 400 400" preserveAspectRatio="xMidYMid slice"><rect width="400" height="400" fill="#D9D2BF"/>
+          <g stroke="#33403A" stroke-width="2" fill="#3A463C">
+            <rect x="170" y="150" width="60" height="170" rx="28"/>
+            <rect x="160" y="140" width="80" height="20" rx="10"/>
+            <path d="M180 320 Q200 345 220 320" fill="none" stroke="#33403A"/>
+          </g></svg>
+        </div>
+        <div class="shade"></div>
+        <span class="price">₹599</span>
+        <div class="ct"><span class="over">Pine Composite</span><h4>Small Sipper</h4><p>Charcoal · 300ml · with lid</p></div>
       </div>
     </div>
     <div class="pills reveal">
-      <span class="pill">Eco Chai Cups</span><span class="pill">Coffee Mugs</span><span class="pill">Engraved Quote Mugs</span><span class="pill">Small Sippers</span><span class="pill">Wine Glasses</span>
+      <span class="pill">Eco Chai Cups</span><span class="pill">Coffee Mugs</span><span class="pill">Engraved Quote Mugs</span><span class="pill">Sippers</span><span class="pill">Wine Glasses</span>
     </div>
   </div>
 </section>
@@ -470,19 +522,42 @@
       <h2>Serveware for the <em>quiet</em> table.</h2>
       <p class="lede">Nibble bowls, thalis and platters — light to hold, calm to look at. A genuine alternative to melamine and ceramic.</p>
     </div>
-    <div class="serve-grid">
-      <div class="shot reveal"><img src="assets/serveware-collection.jpg" alt="Pine needle bowls and trays collection" />
-        <div class="cap"><h4>The Pine Composite Collection</h4><span class="p">Bowls · trays · thalis</span></div>
+    <div class="cards">
+      <div class="pcard reveal">
+        <div class="pic" aria-hidden="true"><svg viewBox="0 0 400 400" preserveAspectRatio="xMidYMid slice"><rect width="400" height="400" fill="#0d3a42"/>
+          <g stroke="#8FA8AD" stroke-width="2" fill="#3a5e66">
+            <ellipse cx="200" cy="240" rx="120" ry="40"/><ellipse cx="200" cy="232" rx="120" ry="34" fill="#476A72"/>
+            <ellipse cx="200" cy="232" rx="90" ry="22" fill="#2C4A52"/></g></svg>
+        </div>
+        <div class="shade"></div>
+        <span class="price">₹1,999</span>
+        <div class="ct"><span class="over">Sage Luxe</span><h4>Nibble Bowls</h4><p>Pack of 6 · sage green</p></div>
       </div>
-      <div class="shot reveal" style="transition-delay:.08s"><img src="assets/serveware-platters.jpg" alt="Stacked pine needle platters" />
-        <div class="cap"><h4>Sage Luxe Platters</h4><span class="p">Pack of 4 · ₹1,999</span></div>
+      <div class="pcard reveal" style="transition-delay:.06s">
+        <div class="pic" aria-hidden="true"><svg viewBox="0 0 400 400" preserveAspectRatio="xMidYMid slice"><rect width="400" height="400" fill="#0d3a42"/>
+          <g stroke="#8FA8AD" stroke-width="2" fill="#476A72">
+            <ellipse cx="200" cy="210" rx="130" ry="22"/><rect x="70" y="210" width="260" height="20" fill="#3a5e66"/>
+            <ellipse cx="200" cy="230" rx="130" ry="20" fill="#2C4A52"/></g></svg>
+        </div>
+        <div class="shade"></div>
+        <span class="price">₹1,999</span>
+        <div class="ct"><span class="over">Sage Luxe</span><h4>Serving Platters</h4><p>Pack of 4 · charcoal</p></div>
+      </div>
+      <div class="pcard reveal" style="transition-delay:.12s">
+        <div class="pic" aria-hidden="true"><svg viewBox="0 0 400 400" preserveAspectRatio="xMidYMid slice"><rect width="400" height="400" fill="#0d3a42"/>
+          <g stroke="#8FA8AD" stroke-width="2" fill="#476A72"><circle cx="200" cy="220" r="110"/>
+            <circle cx="200" cy="220" r="82" fill="#2C4A52"/></g></svg>
+        </div>
+        <div class="shade"></div>
+        <span class="price">₹1,499</span>
+        <div class="ct"><span class="over">Sage Luxe</span><h4>Modern Thali</h4><p>Single · sage</p></div>
       </div>
     </div>
     <div class="serve-facts reveal">
       <div><h5>Lightweight</h5><p>Half the weight of ceramic, none of the fragility.</p></div>
-      <div><h5>Washable</h5><p>Completely washable, dishwasher-tolerant by design.</p></div>
-      <div><h5>Textured</h5><p>The natural grain of pine shows through every piece.</p></div>
-      <div><h5>Biodegradable</h5><p>Returns to soil when a piece finally retires.</p></div>
+      <div><h5>Washable</h5><p>Completely washable, dishwasher-tolerant.</p></div>
+      <div><h5>Textured</h5><p>The natural grain of pine shows through.</p></div>
+      <div><h5>Biodegradable</h5><p>Returns to soil when finally retired.</p></div>
     </div>
   </div>
 </section>
@@ -493,8 +568,15 @@
   <div class="wrap">
     <div class="honey-wrap">
       <div class="honey-visual reveal">
-        <div class="shot"><img src="assets/honey-set.jpg" alt="Raw Himalayan honey jar" /></div>
         <span class="tag">Raw · Unfiltered</span>
+        <div class="jar"><svg viewBox="0 0 160 200"><defs><linearGradient id="hny" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#F2C879"/><stop offset=".4" stop-color="#E8A14A"/><stop offset="1" stop-color="#B6751E"/></linearGradient></defs>
+          <rect x="48" y="20" width="64" height="22" rx="4" fill="#7A5530"/>
+          <rect x="40" y="42" width="80" height="14" rx="4" fill="#9C7547"/>
+          <path d="M40 56 L120 56 L124 176 Q120 188 80 188 Q40 188 36 176 Z" fill="url(#hny)"/>
+          <ellipse cx="80" cy="60" rx="40" ry="6" fill="#F6DCA0" opacity=".7"/>
+          <rect x="56" y="96" width="48" height="44" fill="#FBF3E0" opacity=".0"/>
+          <text x="80" y="122" text-anchor="middle" font-family="Fraunces, serif" font-style="italic" font-size="13" fill="#7A4A1E">raw honey</text>
+        </svg></div>
       </div>
       <div class="reveal" style="transition-delay:.1s">
         <div class="eyebrow-row"><span class="num">·</span><span class="line"></span><span class="over">From the same forest</span></div>
@@ -520,17 +602,26 @@
       <p class="lede">A single roll-on, hand-blended from Himalayan botanicals and essential oils. No harsh synthetics — only what the mountain grows.</p>
     </div>
     <div class="perfume-wrap">
-      <div class="perfume-visual reveal"><img src="assets/perfume-set.jpg" alt="Intime botanical perfume roll-on" /><div class="glow"></div></div>
+      <div class="perfume-visual reveal">
+        <div class="bottle"><svg viewBox="0 0 140 240"><defs><linearGradient id="oil" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#D9A86A" stop-opacity=".7"/><stop offset="1" stop-color="#8A5A2E"/></linearGradient></defs>
+          <rect x="58" y="14" width="24" height="30" rx="4" fill="#3A2A1E"/>
+          <rect x="52" y="40" width="36" height="10" rx="3" fill="#5A4530"/>
+          <path d="M52 50 L88 50 L94 210 Q88 226 70 226 Q52 226 46 210 Z" fill="url(#oil)" stroke="#6A4A28" stroke-width="1"/>
+          <ellipse cx="70" cy="54" rx="18" ry="4" fill="#E8C998" opacity=".6"/>
+          <circle cx="70" cy="200" r="3" fill="#FFE0B0" opacity=".8"/>
+        </svg></div>
+      </div>
       <div class="perfume-notes reveal" style="transition-delay:.1s">
         <div class="note"><span class="nt">Top</span><div><h4>Pine needle & cold air</h4><p>The first breath — green, resinous, unmistakably mountain.</p></div></div>
         <div class="note"><span class="nt">Heart</span><div><h4>Wild herbs & rhododendron</h4><p>The middle — soft florals and the herbal edge of a hillside walk.</p></div></div>
         <div class="note"><span class="nt">Base</span><div><h4>Cedar, amber & skin warmth</h4><p>The dry-down — quiet, warm, close to the body. 10ml roll-on.</p></div></div>
+        <div style="margin-top:18px"><a class="btn btn-solid" style="background:#D9A86A;color:#1A1410" href="#cta">Shop the roll-on · ₹950</a></div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- IMPACT QUOTE -->
+<!-- IMPACT -->
 <section class="sec impact">
   <div class="wrap narrow">
     <span class="mark reveal">"</span>
@@ -557,23 +648,12 @@
   <div class="wrap">
     <div class="foot-top">
       <div class="foot-brand">
-        <a href="#" class="brand">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.1">
-            <path d="M12 2 L12 22"/><path d="M12 4 L7 8 M12 4 L17 8"/><path d="M12 9 L6 14 M12 9 L18 14"/><path d="M12 14 L5 19 M12 14 L19 19"/>
-          </svg>
-          Himalayan Pine Co.
-        </a>
+        <a href="#" class="brand"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.1"><path d="M12 2 L12 22"/><path d="M12 4 L7 8 M12 4 L17 8"/><path d="M12 9 L6 14 M12 9 L18 14"/><path d="M12 14 L5 19 M12 14 L19 19"/></svg>Himalayan Pine Co.</a>
         <p>An environmental-engineering brand of Vasshin Composites, turning a forest-fire hazard into objects worth keeping. Headquartered in Dharamshala, Himachal Pradesh.</p>
       </div>
-      <div class="foot-col"><h5>Shop</h5>
-        <a href="#drinkware">Drinkware</a><a href="#serveware">Serveware</a><a href="#honey">Raw Honey</a><a href="#perfume">Botanical Perfume</a><a href="#cta">Gift Sets</a>
-      </div>
-      <div class="foot-col"><h5>The House</h5>
-        <a href="#story">Our Story</a><a href="#fire">The Fire</a><a href="#">The Material</a><a href="#">Corporate Gifting</a><a href="#">Café Wholesale</a>
-      </div>
-      <div class="foot-col"><h5>Contact</h5>
-        <a href="mailto:hello@himalayanpine.co">hello@himalayanpine.co</a><a href="#">Dharamshala, HP</a><a href="#">Bengaluru, KA</a><a href="#">Instagram</a>
-      </div>
+      <div class="foot-col"><h5>Shop</h5><a href="#drinkware">Drinkware</a><a href="#serveware">Serveware</a><a href="#honey">Raw Honey</a><a href="#perfume">Botanical Perfume</a><a href="#cta">Gift Sets</a></div>
+      <div class="foot-col"><h5>The House</h5><a href="#story">Our Story</a><a href="#fire">The Fire</a><a href="#">The Material</a><a href="#">Corporate Gifting</a><a href="#">Café Wholesale</a></div>
+      <div class="foot-col"><h5>Contact</h5><a href="mailto:hello@himalayanpine.co">hello@himalayanpine.co</a><a href="#">Dharamshala, HP</a><a href="#">Bengaluru, KA</a><a href="#">Instagram</a></div>
     </div>
     <div class="foot-bot">
       <p>© 2024 Himalayan Pine Co. · A concept redesign for internal review.</p>
@@ -583,74 +663,59 @@
 </footer>
 
 <script>
-  // sticky nav
   const bar=document.getElementById('topbar');
   const onScroll=()=>bar.classList.toggle('scrolled',window.scrollY>40);
   onScroll();window.addEventListener('scroll',onScroll,{passive:true});
-
-  // reveal on view
-  const io=new IntersectionObserver((es)=>{
-    es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}});
-  },{threshold:.12,rootMargin:'0px 0px -40px 0px'});
+  const io=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}});},{threshold:.12,rootMargin:'0px 0px -40px 0px'});
   document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
 
-  // FIRE scroll-driven animation
+  // FIRE scroll animation
   const fireSec=document.getElementById('fire');
   const flames=document.getElementById('flames');
-  const flamePath=document.getElementById('flamePath');
-  const flamePath2=document.getElementById('flamePath2');
-  const smoke=document.getElementById('smoke');
   const cleared=document.getElementById('fireCleared');
+  const embersBed=document.getElementById('embersBed');
+  const embersBox=document.getElementById('embers');
   const fireFill=document.getElementById('fireFill');
   const firePct=document.getElementById('firePct');
+  const fireCap=document.getElementById('fireCap');
+  const clamp=(v,a,b)=>Math.max(a,Math.min(b,v));
+  const lerp=(a,b,t)=>a+(b-a)*t;
 
-  function lerp(a,b,t){return a+(b-a)*t}
-  function clamp(v,a,b){return Math.max(a,Math.min(b,v))}
+  // spawn ember elements
+  for(let i=0;i<26;i++){
+    const e=document.createElement('span');
+    e.className='ember';
+    e.style.left=(Math.random()*100)+'%';
+    e.style.setProperty('--drift',((Math.random()*60-30))+'px');
+    e.style.animationDuration=(2.4+Math.random()*2.6)+'s';
+    e.style.animationDelay=(-Math.random()*4)+'s';
+    e.style.width=e.style.height=(2+Math.random()*3)+'px';
+    embersBox.appendChild(e);
+  }
 
   function updateFire(){
     const rect=fireSec.getBoundingClientRect();
     const vh=window.innerHeight;
-    // progress: 0 when section top at bottom of viewport, 1 when section bottom at top
-    const total=fireSec.offsetHeight - vh;
-    let p=clamp((-rect.top)/total,0,1);
-    // flames shrink + drop + fade as p -> 1
-    const scale=lerp(1,0.18,p);
-    const drop=lerp(0,220,p);
-    const opacity=lerp(1,0,p);
-    flames.style.transform=`translateY(${drop}px) scale(1,${scale})`;
-    flames.style.opacity=opacity;
-    flames.style.transformOrigin='bottom center';
-    // individual flame paths get shorter
-    flamePath.setAttribute('d', morphFlame(p,false));
-    flamePath2.setAttribute('d', morphFlame(p,true));
-    // smoke rises & thickens then clears
-    const smokeA=clamp(p*1.6-0.4,0,1)*(1-clamp((p-0.7)/0.3,0,1));
-    smoke.style.background=`radial-gradient(55% 45% at 50% ${lerp(80,40,p)}%,rgba(150,150,150,${smokeA*.5}) 0%,rgba(120,120,120,0) 70%)`;
-    // cleared forest fades in toward the end
-    cleared.style.opacity=clamp((p-0.55)/0.45,0,1);
+    const total=fireSec.offsetHeight-vh;
+    const p=clamp((-rect.top)/total,0,1);
+    // flames: full height & bright at p=0, shrink down to embers then out
+    const scaleY=lerp(1,0.12,p);
+    const opacity=lerp(1,0,p*1.15);
+    flames.style.transform='scale(1,'+scaleY+')';
+    flames.style.opacity=clamp(opacity,0,1);
+    // embers bed glows as flames drop, peaks mid, fades at end
+    const bedA=clamp(Math.sin(p*Math.PI)*1.1,0,1)*(1-clamp((p-0.8)/0.2,0,1));
+    embersBed.style.opacity=bedA;
+    // ember particles fade out toward the end
+    embersBox.style.opacity=clamp(1-p*1.3,0,1);
+    // cleared forest rises in at the end
+    cleared.style.opacity=clamp((p-0.62)/0.38,0,1);
     // meter
     const remaining=Math.round((1-p)*100);
     fireFill.style.height=remaining+'%';
     firePct.textContent=remaining+'%';
-  }
-  // morph the flame path: as p increases, the top edge lowers toward baseline (900)
-  function morphFlame(p, low){
-    const baseY=900;
-    const top0=low?640:560;
-    // peak points of the flame (from original path) gradually descend
-    const d=top0 + (baseY-top0)*p; // current peak
-    // build a wavy top edge at height d
-    const amp=low?28:60; const ampNow=amp*(1-p);
-    const w=1600;
-    let path=`M0 ${baseY} L0 ${d+ampNow*0.4}`;
-    const steps=7;
-    for(let i=1;i<=steps;i++){
-      const x=(w/steps)*i;
-      const y=d - (i%2===0? ampNow: -ampNow*0.6);
-      path+=` Q${x-(w/steps)/2} ${d} ${x} ${y}`;
-    }
-    path+=` L${w} ${baseY} Z`;
-    return path;
+    fireCap.textContent = p<0.08?'Burning':p<0.5?'Subsiding':p<0.92?'Smouldering':'Extinguished';
+    document.getElementById('fireEnd').style.opacity = p>0.9?'1':'0';
   }
   let raf;
   window.addEventListener('scroll',()=>{cancelAnimationFrame(raf);raf=requestAnimationFrame(updateFire)},{passive:true});
