@@ -3,207 +3,134 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Himalayan Pine Co. — Objects from the forest floor</title>
-<meta name="description" content="Himalayan Pine Co. turns fallen pine needles — a forest-fire hazard — into unbreakable, plastic-free tableware, raw mountain honey and botanical perfume. Made in Dharamshala." />
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path d='M12 2 L12 22 M12 4 L7 8 M12 4 L17 8 M12 9 L6 14 M12 9 L18 14 M12 14 L5 19 M12 14 L19 19' stroke='%23A85A3C' stroke-width='1.2' fill='none'/></svg>" />
+<title>Himalayan Pine Co. — From forest to form</title>
+<meta name="description" content="Himalayan Pine Co. turns fallen pine needles — a forest-fire hazard — into unbreakable, plastic-free drinkware, serveware, raw honey and botanical perfume. Made in Dharamshala." />
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path d='M12 2 L12 22 M12 4 L7 8 M12 4 L17 8 M12 9 L6 14 M12 9 L18 14 M12 14 L5 19 M12 14 L19 19' stroke='%23097939' stroke-width='1.2' fill='none'/></svg>" />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
   :root{
-    --bg:#F3EFE6;
-    --bg-2:#EBE5D6;
-    --surface:#FBF8F1;
-    --ink:#241F1A;
-    --ink-soft:#3A332B;
-    --muted:#7C7367;
-    --line:rgba(36,31,26,.14);
-    --line-strong:rgba(36,31,26,.32);
-    --sage:#5E6249;
-    --terra:#A85A3C;
-    --gold:#B6862E;
-    --serif:'Fraunces', Georgia, serif;
-    --sans:'Inter', system-ui, sans-serif;
+    --bg:#F4F1E8; --bg-2:#E9E4D4; --surface:#FBF8F1;
+    --ink:#1F2A24; --ink-soft:#33403A; --muted:#6E7A6E;
+    --line:rgba(31,42,36,.14); --line-strong:rgba(31,42,36,.30);
+    --sage:#5E6E4F; --sage-soft:#8A9978; --teal:#0F4A53;
+    --terra:#B05A36; --gold:#B6862E;
+    --serif:'Fraunces', Georgia, serif; --sans:'Inter', system-ui, sans-serif;
   }
   *{box-sizing:border-box;margin:0;padding:0}
   html{scroll-behavior:smooth}
-  body{
-    background:var(--bg);
-    color:var(--ink);
-    font-family:var(--sans);
-    font-weight:400;
-    line-height:1.65;
-    -webkit-font-smoothing:antialiased;
-    text-rendering:optimizeLegibility;
-    overflow-x:hidden;
-  }
-  /* grain overlay */
-  body::before{
-    content:"";
-    position:fixed;inset:0;
-    pointer-events:none;z-index:9999;
-    opacity:.035;
-    background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='180' height='180'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
-    mix-blend-mode:multiply;
-  }
-  ::selection{background:var(--ink);color:var(--bg)}
+  body{background:var(--bg);color:var(--ink);font-family:var(--sans);font-weight:400;line-height:1.65;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;overflow-x:hidden}
+  body::before{content:"";position:fixed;inset:0;pointer-events:none;z-index:9999;opacity:.04;background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='180' height='180'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");mix-blend-mode:multiply}
+  ::selection{background:var(--sage);color:#fff}
   a{color:inherit;text-decoration:none}
   img{display:block;max-width:100%}
   .wrap{max-width:1320px;margin:0 auto;padding:0 32px}
   .narrow{max-width:680px}
-
-  /* ---- typography helpers ---- */
-  .over{
-    font-family:var(--sans);
-    font-size:11px;font-weight:500;
-    letter-spacing:.22em;text-transform:uppercase;
-    color:var(--muted);
-  }
-  .display{
-    font-family:var(--serif);
-    font-weight:400;
-    line-height:1.02;
-    letter-spacing:-.02em;
-    font-optical-sizing:auto;
-  }
+  .over{font-family:var(--sans);font-size:11px;font-weight:500;letter-spacing:.22em;text-transform:uppercase;color:var(--muted)}
+  .display{font-family:var(--serif);font-weight:400;line-height:1.02;letter-spacing:-.02em}
   .display em{font-style:italic;font-weight:400;color:var(--terra)}
   .serif{font-family:var(--serif)}
-  .lead{font-size:clamp(17px,1.25vw,20px);line-height:1.6;color:var(--ink-soft);font-weight:300}
 
-  /* ---- top bar ---- */
-  .topbar{
-    position:fixed;top:0;left:0;right:0;z-index:200;
-    transition:background .4s ease, box-shadow .4s ease, border-color .4s;
-    border-bottom:1px solid transparent;
-  }
-  .topbar.scrolled{
-    background:rgba(243,239,230,.86);
-    backdrop-filter:blur(14px);
-    -webkit-backdrop-filter:blur(14px);
-    border-bottom:1px solid var(--line);
-  }
+  /* TOP BAR */
+  .topbar{position:fixed;top:0;left:0;right:0;z-index:300;transition:background .4s,box-shadow .4s,border-color .4s;border-bottom:1px solid transparent}
+  .topbar.scrolled{background:rgba(244,241,232,.9);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
   .topbar .wrap{display:flex;align-items:center;justify-content:space-between;height:74px}
-  .brand{
-    font-family:var(--serif);font-weight:500;
-    font-size:18px;letter-spacing:.02em;
-    display:flex;align-items:center;gap:10px;
-  }
+  .brand{font-family:var(--serif);font-weight:500;font-size:18px;letter-spacing:.02em;display:flex;align-items:center;gap:10px}
   .brand svg{width:26px;height:26px}
-  .nav{display:flex;gap:38px;align-items:center}
-  .nav a{
-    font-size:13px;font-weight:400;letter-spacing:.04em;
-    color:var(--ink-soft);position:relative;padding:6px 0;
-  }
-  .nav a::after{content:"";position:absolute;left:0;bottom:0;height:1px;width:0;background:var(--ink);transition:width .35s ease}
+  .nav{display:flex;gap:34px;align-items:center}
+  .nav a{font-size:13px;font-weight:400;letter-spacing:.03em;color:var(--ink-soft);position:relative;padding:6px 0}
+  .nav a::after{content:"";position:absolute;left:0;bottom:0;height:1px;width:0;background:var(--sage);transition:width .35s ease}
   .nav a:hover::after{width:100%}
-  .nav-cta{
-    border:1px solid var(--line-strong);
-    padding:9px 20px;border-radius:40px;
-    font-size:12px;letter-spacing:.08em;
-    transition:background .3s,color .3s;
-  }
-  .nav-cta:hover{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+  .nav-cta{border:1px solid var(--line-strong);padding:9px 20px;border-radius:40px;font-size:12px;letter-spacing:.08em;transition:background .3s,color .3s,border-color .3s}
+  .nav-cta:hover{background:var(--sage);color:#fff;border-color:var(--sage)}
   .burger{display:none;flex-direction:column;gap:5px;cursor:pointer}
   .burger span{width:22px;height:1.5px;background:var(--ink)}
 
-  /* ---- hero ---- */
-  .hero{
-    position:relative;
-    min-height:100vh;
-    display:flex;align-items:flex-end;
-    padding:120px 0 70px;
-    background:
-      radial-gradient(120% 90% at 80% 0%, rgba(168,90,60,.10), transparent 55%),
-      radial-gradient(90% 70% at 10% 100%, rgba(94,98,73,.14), transparent 60%),
-      var(--bg);
-    overflow:hidden;
-  }
-  .hero-art{position:absolute;inset:0;z-index:0;opacity:.5}
-  .hero-veil{position:absolute;inset:0;z-index:1;pointer-events:none;background:linear-gradient(to right,rgba(243,239,230,.82) 0%,transparent 50%),linear-gradient(to top,rgba(243,239,230,.92) 0%,transparent 42%)}
+  /* HERO */
+  .hero{position:relative;min-height:100vh;display:flex;align-items:flex-end;padding:120px 0 70px;overflow:hidden;background:radial-gradient(120% 90% at 80% 0%,rgba(176,90,54,.08),transparent 55%),radial-gradient(90% 70% at 10% 100%,rgba(94,110,79,.12),transparent 60%),var(--bg)}
+  .hero-art{position:absolute;inset:0;z-index:0;opacity:.42}
   .hero-art svg{width:100%;height:100%}
+  .hero-veil{position:absolute;inset:0;z-index:1;pointer-events:none;background:linear-gradient(to right,rgba(244,241,232,.82) 0%,transparent 50%),linear-gradient(to top,rgba(244,241,232,.96) 0%,transparent 40%)}
   .hero .wrap{position:relative;z-index:2;width:100%}
   .hero-grid{display:grid;grid-template-columns:1.4fr 1fr;gap:60px;align-items:end}
-  .hero h1{
-    font-family:var(--serif);
-    font-weight:300;
-    font-size:clamp(46px,7.4vw,108px);
-    line-height:.96;letter-spacing:-.025em;
-    max-width:11ch;
-  }
+  .hero h1{font-family:var(--serif);font-weight:300;font-size:clamp(46px,7.4vw,108px);line-height:.96;letter-spacing:-.025em;max-width:12ch}
   .hero h1 em{font-style:italic;color:var(--terra);font-weight:400}
   .hero-side{display:flex;flex-direction:column;gap:26px;padding-bottom:10px}
   .hero-side p{font-size:16px;line-height:1.65;color:var(--ink-soft);font-weight:300;max-width:34ch}
   .hero-actions{display:flex;gap:18px;align-items:center;flex-wrap:wrap}
-  .btn{
-    font-family:var(--sans);font-size:12px;letter-spacing:.14em;text-transform:uppercase;
-    padding:15px 30px;border-radius:2px;
-    transition:all .35s ease;cursor:pointer;border:none;
-  }
-  .btn-solid{background:var(--ink);color:var(--bg)}
-  .btn-solid:hover{background:var(--terra)}
-  .btn-line{background:transparent;color:var(--ink);border-bottom:1px solid var(--ink);padding:6px 0;border-radius:0}
-  .btn-line:hover{color:var(--terra);border-color:var(--terra)}
-  .hero-meta{
-    position:absolute;left:32px;bottom:30px;z-index:2;
-    display:flex;gap:30px;
-  }
+  .btn{font-family:var(--sans);font-size:12px;letter-spacing:.14em;text-transform:uppercase;padding:15px 30px;border-radius:2px;transition:all .35s ease;cursor:pointer;border:none}
+  .btn-solid{background:var(--ink);color:var(--bg)}.btn-solid:hover{background:var(--sage)}
+  .btn-line{background:transparent;color:var(--ink);border-bottom:1px solid var(--ink);padding:6px 0;border-radius:0}.btn-line:hover{color:var(--terra);border-color:var(--terra)}
+  .hero-meta{position:absolute;left:32px;bottom:30px;z-index:2;display:flex;gap:30px}
   .hero-meta div{display:flex;flex-direction:column;gap:4px}
   .hero-meta .v{font-family:var(--serif);font-size:26px;font-weight:400}
   .hero-meta .k{font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}
-  .scroll-cue{
-    position:absolute;right:32px;bottom:34px;z-index:2;
-    font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);
-    writing-mode:vertical-rl;display:flex;align-items:center;gap:14px;
-  }
+  .scroll-cue{position:absolute;right:32px;bottom:34px;z-index:2;font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);writing-mode:vertical-rl;display:flex;align-items:center;gap:14px}
   .scroll-cue::after{content:"";width:1px;height:50px;background:var(--line-strong);animation:cue 2.4s ease-in-out infinite}
   @keyframes cue{0%,100%{opacity:.3;transform:scaleY(.6)}50%{opacity:1;transform:scaleY(1)}}
 
-  /* ---- marquee strip ---- */
-  .marquee{
-    border-top:1px solid var(--line);border-bottom:1px solid var(--line);
-    background:var(--bg-2);overflow:hidden;
-  }
-  .marquee-track{display:flex;gap:60px;white-space:nowrap;padding:18px 0;animation:slide 38s linear infinite;width:max-content}
-  .marquee span{
-    font-family:var(--serif);font-size:15px;font-style:italic;color:var(--ink-soft);
-    display:flex;align-items:center;gap:60px;
-  }
-  .marquee span::after{content:"✦";color:var(--terra);font-style:normal}
+  /* MARQUEE */
+  .marquee{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--bg-2);overflow:hidden}
+  .marquee-track{display:flex;gap:60px;white-space:nowrap;padding:18px 0;animation:slide 40s linear infinite;width:max-content}
+  .marquee span{font-family:var(--serif);font-size:15px;font-style:italic;color:var(--ink-soft);display:flex;align-items:center;gap:60px}
+  .marquee span::after{content:"✦";color:var(--sage);font-style:normal}
   @keyframes slide{to{transform:translateX(-50%)}}
 
-  /* ---- section base ---- */
   section{position:relative}
   .sec{padding:clamp(90px,12vw,150px) 0}
   .eyebrow-row{display:flex;align-items:center;gap:14px;margin-bottom:24px}
   .eyebrow-row .num{font-family:var(--serif);font-size:13px;color:var(--terra)}
   .eyebrow-row .line{flex:0 0 40px;height:1px;background:var(--line-strong)}
 
-  /* ---- manifesto ---- */
+  /* MANIFESTO */
   .manifesto .wrap{display:grid;grid-template-columns:1fr 1.6fr;gap:80px}
   .manifesto h2{font-family:var(--serif);font-weight:300;font-size:clamp(34px,4vw,56px);line-height:1.04;letter-spacing:-.02em}
   .manifesto h2 em{font-style:italic;color:var(--terra)}
   .manifesto-body p{font-size:18px;line-height:1.7;color:var(--ink-soft);font-weight:300;margin-bottom:22px;max-width:54ch}
-  .manifesto-body p:first-of-type::first-letter{
-    font-family:var(--serif);font-size:64px;line-height:.8;float:left;
-    padding:6px 12px 0 0;color:var(--terra);font-weight:400;
-  }
+  .manifesto-body p:first-of-type::first-letter{font-family:var(--serif);font-size:64px;line-height:.8;float:left;padding:6px 12px 0 0;color:var(--sage);font-weight:400}
   .sig{margin-top:30px;font-family:var(--serif);font-style:italic;color:var(--ink);font-size:18px}
   .sig small{display:block;font-family:var(--sans);font-style:normal;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-top:6px}
 
-  /* ---- problem / full-bleed quote ---- */
-  .problem{background:var(--ink);color:var(--bg);overflow:hidden}
-  .problem .wrap{display:grid;grid-template-columns:1.1fr 1fr;gap:70px;align-items:center}
-  .problem .over{color:rgba(243,239,230,.55)}
-  .problem h2{font-family:var(--serif);font-weight:300;font-size:clamp(30px,3.4vw,48px);line-height:1.12;letter-spacing:-.015em;margin:18px 0 26px;max-width:22ch}
-  .problem h2 em{font-style:italic;color:#D98A66}
-  .problem p{color:rgba(243,239,230,.72);font-weight:300;font-size:17px;line-height:1.7;max-width:46ch}
-  .problem-figure{position:relative;aspect-ratio:4/5;border:1px solid rgba(243,239,230,.18);overflow:hidden;border-radius:2px}
-  .problem-figure svg{width:100%;height:100%}
-  .stat-row{display:flex;gap:48px;margin-top:42px;flex-wrap:wrap}
-  .stat .v{font-family:var(--serif);font-size:40px;font-weight:300;color:#D98A66}
-  .stat .k{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:rgba(243,239,230,.5);margin-top:6px;max-width:18ch;line-height:1.4}
+  /* FIRE SCROLL SECTION */
+  .fire{position:relative;height:240vh;background:#0b0f0c;overflow:hidden}
+  .fire-sticky{position:sticky;top:0;height:100vh;overflow:hidden;display:flex;align-items:center}
+  .fire-bg{position:absolute;inset:0;z-index:0}
+  .fire-bg img{width:100%;height:100%;object-fit:cover;filter:saturate(.85) brightness(.6)}
+  .fire-bg .scorch{position:absolute;inset:0;background:linear-gradient(to bottom,rgba(8,12,9,.5),rgba(8,12,9,.2) 35%,rgba(8,12,9,.78));mix-blend-mode:multiply}
+  /* the ground line where fire sits */
+  .ground{position:absolute;left:0;right:0;bottom:0;height:30vh;z-index:1;background:linear-gradient(to top,rgba(8,12,9,.95),transparent);pointer-events:none}
+  /* flames: tall tongues, flicker, scroll-shrinks height */
+  .flames{position:absolute;left:0;right:0;bottom:0;height:62vh;z-index:2;pointer-events:none;mix-blend-mode:screen;transform-origin:bottom center;will-change:transform,opacity}
+  .flames svg{width:100%;height:100%;display:block}
+  .flames .tongue{transform-origin:bottom center;animation:flick .5s ease-in-out infinite alternate}
+  .flames .tongue:nth-child(2n){animation-duration:.7s;animation-delay:-.2s}
+  .flames .tongue:nth-child(3n){animation-duration:.6s;animation-delay:-.35s}
+  .flames .tongue:nth-child(5n){animation-duration:.8s;animation-delay:-.1s}
+  @keyframes flick{0%{transform:scaleY(1) scaleX(1) rotate(-1deg)}100%{transform:scaleY(1.12) scaleX(.96) rotate(1deg)}}
+  /* ember particles */
+  .embers{position:absolute;inset:0;z-index:3;pointer-events:none;overflow:hidden}
+  .ember{position:absolute;bottom:28vh;width:4px;height:4px;border-radius:50%;background:#FFD37A;box-shadow:0 0 8px 2px rgba(255,180,80,.7);animation:rise linear infinite;opacity:0}
+  @keyframes rise{0%{transform:translateY(0) translateX(0);opacity:0}10%{opacity:1}80%{opacity:.8}100%{transform:translateY(-70vh) translateX(var(--drift,0));opacity:0}}
+  /* smoldering embers bed (shown when fire low) */
+  .embers-bed{position:absolute;left:0;right:0;bottom:0;height:14vh;z-index:2;background:radial-gradient(60% 100% at 50% 100%,rgba(255,90,30,.5),transparent 70%);opacity:0;mix-blend-mode:screen}
+  /* cleared green forest */
+  .fire-cleared{position:absolute;inset:0;z-index:1;opacity:0;background:radial-gradient(120% 90% at 50% 30%,#33502f 0%,#243a26 45%,#16241a 100%)}
+  .fire-cleared svg{position:absolute;left:0;right:0;bottom:0;width:100%;height:50vh}
+  .fire-content{position:relative;z-index:6;color:#F4F1E8;max-width:560px;padding:0 32px}
+  .fire-content::before{content:"";position:absolute;inset:-12px -16px -12px -16px;z-index:-1;background:linear-gradient(105deg,rgba(6,10,7,.86),rgba(6,10,7,.3) 82%,transparent);border-radius:6px;pointer-events:none}
+  .fire-content .over{color:rgba(244,241,232,.62)}
+  .fire-content h2{font-family:var(--serif);font-weight:400;font-size:clamp(34px,5vw,60px);line-height:1.04;letter-spacing:-.02em;margin:18px 0 24px;max-width:15ch}
+  .fire-content h2 em{font-style:italic;color:#F2A65A}
+  .fire-content p{color:rgba(244,241,232,.86);font-weight:300;font-size:17px;line-height:1.7;max-width:44ch}
+  .fire-meter{position:absolute;right:44px;top:50%;transform:translateY(-50%);z-index:6;display:flex;flex-direction:column;gap:12px;align-items:center}
+  .fire-meter .track{width:3px;height:220px;background:rgba(244,241,232,.16);position:relative;border-radius:3px;overflow:hidden}
+  .fire-meter .fill{position:absolute;left:0;bottom:0;width:100%;background:linear-gradient(to top,#D4541E,#F2A65A,#FFE08A);height:100%;transition:height .1s linear}
+  .fire-meter .label{font-size:9px;letter-spacing:.18em;text-transform:uppercase;color:rgba(244,241,232,.55);writing-mode:vertical-rl}
+  .fire-meter .out{font-family:var(--serif);font-size:15px;color:#F2A65A;letter-spacing:.02em}
+  .fire-meter .cap{font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:rgba(244,241,232,.5)}
 
-  /* ---- process ---- */
+  /* PROCESS */
   .process h2{font-family:var(--serif);font-weight:300;font-size:clamp(32px,4vw,52px);letter-spacing:-.02em;line-height:1.05;max-width:16ch;margin-bottom:8px}
   .process .sub{color:var(--muted);max-width:50ch;margin-bottom:60px;font-size:16px;font-weight:300}
   .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border-top:1px solid var(--line)}
@@ -212,59 +139,97 @@
   .step .n{font-family:var(--serif);font-size:13px;color:var(--terra);margin-bottom:18px}
   .step h3{font-family:var(--serif);font-weight:500;font-size:22px;letter-spacing:-.01em;margin-bottom:12px}
   .step p{font-size:14px;line-height:1.65;color:var(--muted);font-weight:300}
-  .step .ico{height:84px;display:flex;align-items:center;justify-content:flex-start;margin-bottom:24px}
-  .step .ico svg{width:54px;height:54px;stroke:var(--ink);stroke-width:1;fill:none}
+  .step .ico{height:84px;display:flex;align-items:center;margin-bottom:24px}
+  .step .ico svg{width:54px;height:54px;stroke:var(--sage);stroke-width:1;fill:none}
 
-  /* ---- collections ---- */
-  .collections{background:var(--bg-2)}
-  .coll-head{display:flex;justify-content:space-between;align-items:flex-end;gap:30px;margin-bottom:54px;flex-wrap:wrap}
-  .coll-head h2{font-family:var(--serif);font-weight:300;font-size:clamp(34px,4.2vw,56px);letter-spacing:-.02em;line-height:1.02}
-  .coll-head p{max-width:34ch;color:var(--muted);font-weight:300}
-  .coll-grid{display:grid;grid-template-columns:1.3fr 1fr 1fr;grid-template-rows:1fr 1fr;gap:18px}
-  .card{
-    position:relative;overflow:hidden;border-radius:2px;
-    background:var(--surface);
-    border:1px solid var(--line);
-    display:flex;flex-direction:column;justify-content:flex-end;
-    min-height:280px;padding:30px;
-    transition:transform .5s cubic-bezier(.2,.8,.2,1);
-  }
-  .card.big{grid-row:span 2;min-height:580px}
-  .card:hover{transform:translateY(-6px)}
-  .card .ph{position:absolute;inset:0;z-index:0;transition:transform .9s ease}
-  .card:hover .ph{transform:scale(1.05)}
-  .card .ph svg{width:100%;height:100%}
-  .card .shade{position:absolute;inset:0;z-index:1;background:linear-gradient(to top,rgba(20,16,12,.88) 0%,rgba(20,16,12,.55) 45%,rgba(20,16,12,.08) 78%,transparent)}
-  .card .ct{position:relative;z-index:2;color:#F3EFE6}
-  .card .ct .over{color:rgba(243,239,230,.7)}
-  .card .ct h3{font-family:var(--serif);font-weight:400;font-size:26px;letter-spacing:-.01em;margin:8px 0 8px}
-  .card .ct p{font-size:13px;color:rgba(243,239,230,.78);font-weight:300;max-width:30ch;line-height:1.5}
-  .card .ct .link{margin-top:16px;font-size:11px;letter-spacing:.16em;text-transform:uppercase;display:inline-flex;gap:8px;align-items:center;border-bottom:1px solid rgba(243,239,230,.5);padding-bottom:4px}
-  .price{position:absolute;top:24px;right:24px;z-index:3;font-family:var(--serif);font-size:14px;color:#F3EFE6;background:rgba(28,24,20,.4);backdrop-filter:blur(6px);padding:5px 12px;border-radius:40px}
+  /* CATEGORY SECTIONS */
+  .cat{padding:clamp(90px,11vw,140px) 0;position:relative;overflow:hidden}
+  .cat-head{display:flex;justify-content:space-between;align-items:flex-end;gap:30px;margin-bottom:54px;flex-wrap:wrap}
+  .cat-head h2{font-family:var(--serif);font-weight:300;font-size:clamp(36px,4.4vw,60px);letter-spacing:-.02em;line-height:1.02;max-width:14ch}
+  .cat-head h2 em{font-style:italic;color:var(--terra)}
+  .cat-head .lede{max-width:34ch;color:var(--muted);font-weight:300;font-size:16px}
+  .cat-num{position:absolute;top:60px;right:60px;font-family:var(--serif);font-size:13px;color:var(--muted);letter-spacing:.1em;display:flex;align-items:center;gap:10px}
+  .cat-num .line{width:30px;height:1px;background:var(--line-strong)}
 
-  /* ---- material / values ---- */
-  .material .wrap{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
-  .mat-art{aspect-ratio:1/1.1;border:1px solid var(--line);border-radius:2px;overflow:hidden;background:var(--surface);position:relative}
-  .mat-art svg{width:100%;height:100%}
-  .material h2{font-family:var(--serif);font-weight:300;font-size:clamp(32px,3.8vw,50px);letter-spacing:-.02em;line-height:1.05;margin-bottom:24px}
-  .material h2 em{font-style:italic;color:var(--terra)}
-  .material .intro{font-size:18px;color:var(--ink-soft);font-weight:300;line-height:1.7;margin-bottom:38px;max-width:48ch}
-  .vals{display:flex;flex-direction:column;gap:0;border-top:1px solid var(--line)}
-  .val{display:grid;grid-template-columns:60px 1fr;gap:18px;padding:22px 0;border-bottom:1px solid var(--line);align-items:start}
-  .val .vn{font-family:var(--serif);font-size:13px;color:var(--terra)}
-  .val h4{font-family:var(--serif);font-weight:500;font-size:18px;margin-bottom:4px}
-  .val p{font-size:14px;color:var(--muted);font-weight:300;line-height:1.55}
+  /* product cards (premium CSS) */
+  .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  .pcard{position:relative;border-radius:2px;overflow:hidden;border:1px solid var(--line);background:var(--surface);min-height:340px;display:flex;flex-direction:column;justify-content:flex-end;padding:26px;transition:transform .5s cubic-bezier(.2,.8,.2,1)}
+  .pcard:hover{transform:translateY(-6px)}
+  .pcard .pic{position:absolute;inset:0;z-index:0}
+  .pcard .pic img{width:100%;height:100%;object-fit:cover;transition:transform 1s ease}
+  .pcard:hover .pic img{transform:scale(1.04)}
+  .pcard .pic svg{width:100%;height:100%}
+  .pcard .shade{position:absolute;inset:0;z-index:1;background:linear-gradient(to top,rgba(20,16,12,.86) 0%,rgba(20,16,12,.4) 45%,rgba(20,16,12,.05) 78%,transparent)}
+  .pcard .ct{position:relative;z-index:2;color:#F4F1E8}
+  .pcard .ct .over{color:rgba(244,241,232,.7)}
+  .pcard .ct h4{font-family:var(--serif);font-weight:500;font-size:21px;letter-spacing:-.01em;margin:6px 0 6px}
+  .pcard .ct p{font-size:13px;color:rgba(244,241,232,.78);font-weight:300;line-height:1.5}
+  .pcard .price{position:absolute;top:20px;right:20px;z-index:3;font-family:var(--serif);font-size:13px;color:#F4F1E8;background:rgba(20,16,12,.45);backdrop-filter:blur(6px);padding:5px 12px;border-radius:40px}
 
-  /* ---- impact quote ---- */
+  /* CAT 1 — Drinkware: cream */
+  .cat-drink{background:var(--bg)}
+  .pills{display:flex;gap:10px;flex-wrap:wrap;margin-top:30px}
+  .pill{font-size:12px;letter-spacing:.04em;color:var(--ink-soft);border:1px solid var(--line-strong);padding:8px 16px;border-radius:40px;transition:all .3s;cursor:pointer}
+  .pill:hover{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+
+  /* CAT 2 — Serveware: deep teal */
+  .cat-serve{background:var(--teal);color:#E8EDE5}
+  .cat-serve .over{color:rgba(232,237,229,.55)}
+  .cat-serve h2 em{color:#E8B65A}
+  .cat-serve .lede{color:rgba(232,237,229,.7)}
+  .cat-serve .cat-num{color:rgba(232,237,229,.5)}
+  .cat-serve .cat-num .line{background:rgba(232,237,229,.3)}
+  .cat-serve .pcard{background:#0d3a42;border-color:rgba(232,237,229,.14)}
+  .cat-serve .pcard .shade{background:linear-gradient(to top,rgba(13,40,46,.9) 0%,rgba(13,40,46,.3) 50%,transparent)}
+  .serve-facts{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:rgba(232,237,229,.14);margin-top:30px;border:1px solid rgba(232,237,229,.14)}
+  .serve-facts div{background:var(--teal);padding:22px}
+  .serve-facts h5{font-family:var(--serif);font-size:16px;margin-bottom:5px;color:#E8B65A}
+  .serve-facts p{font-size:12px;color:rgba(232,237,229,.7);font-weight:300;line-height:1.5}
+
+  /* CAT 3 — Honey: warm amber */
+  .cat-honey{background:linear-gradient(180deg,#F4F1E8,#EFE2CE)}
+  .honey-wrap{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+  .honey-visual{position:relative;border-radius:2px;overflow:hidden;min-height:480px;background:radial-gradient(80% 70% at 50% 40%,#E8C36A,#B6862E 70%,#8A5A1E);display:flex;align-items:center;justify-content:center}
+  .honey-visual .jar{width:160px;height:200px;position:relative}
+  .honey-visual .jar svg{width:100%;height:100%}
+  .honey-visual .tag{position:absolute;top:18px;left:18px;background:var(--terra);color:#fff;font-family:var(--serif);font-style:italic;font-size:14px;padding:7px 14px;border-radius:40px}
+  .honey-list{display:flex;flex-direction:column;gap:0;border-top:1px solid var(--line)}
+  .honey-item{display:grid;grid-template-columns:40px 1fr auto;gap:16px;padding:22px 0;border-bottom:1px solid var(--line);align-items:center;transition:padding-left .3s}
+  .honey-item:hover{padding-left:8px}
+  .honey-item .hn{font-family:var(--serif);font-style:italic;color:var(--terra)}
+  .honey-item h4{font-family:var(--serif);font-weight:500;font-size:19px;margin-bottom:2px}
+  .honey-item p{font-size:13px;color:var(--muted);font-weight:300}
+  .honey-item .price{font-family:var(--serif);font-size:17px;color:var(--ink)}
+
+  /* CAT 4 — Perfume: dark */
+  .cat-perfume{background:#1A1410;color:#EDE3D6}
+  .cat-perfume .over{color:rgba(237,227,214,.5)}
+  .cat-perfume h2 em{color:#D9A86A}
+  .cat-perfume .lede{color:rgba(237,227,214,.7)}
+  .cat-perfume .cat-num{color:rgba(237,227,214,.45)}
+  .cat-perfume .cat-num .line{background:rgba(237,227,214,.3)}
+  .perfume-wrap{display:grid;grid-template-columns:1fr 1.1fr;gap:60px;align-items:center}
+  .perfume-visual{position:relative;border-radius:2px;overflow:hidden;min-height:480px;background:radial-gradient(60% 50% at 50% 45%,rgba(217,168,106,.22),transparent 70%),#221A14;display:flex;align-items:center;justify-content:center;border:1px solid rgba(237,227,214,.12)}
+  .perfume-visual .bottle{width:140px;height:240px;animation:float 6s ease-in-out infinite}
+  @keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}
+  .perfume-visual .bottle svg{width:100%;height:100%}
+  .perfume-notes{display:flex;flex-direction:column;gap:18px}
+  .note{display:grid;grid-template-columns:70px 1fr;gap:18px;padding-bottom:18px;border-bottom:1px solid rgba(237,227,214,.12)}
+  .note:last-child{border-bottom:none}
+  .note .nt{font-family:var(--sans);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:#D9A86A}
+  .note h4{font-family:var(--serif);font-weight:500;font-size:20px;margin-bottom:4px}
+  .note p{font-size:14px;color:rgba(237,227,214,.7);font-weight:300;line-height:1.6}
+
+  /* IMPACT */
   .impact{background:var(--bg-2)}
   .impact .wrap.narrow{text-align:center}
   .impact blockquote{font-family:var(--serif);font-weight:300;font-style:italic;font-size:clamp(26px,3.2vw,42px);line-height:1.3;letter-spacing:-.01em;margin:0 auto;max-width:24ch}
   .impact cite{display:block;margin-top:28px;font-family:var(--sans);font-style:normal;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
-  .impact .mark{font-family:var(--serif);font-size:90px;line-height:.5;color:var(--terra);display:block;margin-bottom:18px}
+  .impact .mark{font-family:var(--serif);font-size:90px;line-height:.5;color:var(--sage);display:block;margin-bottom:18px}
 
-  /* ---- journal / newsletter ---- */
+  /* CTA */
   .cta{padding:clamp(90px,11vw,140px) 0;text-align:center}
-  .cta .over{justify-content:center;display:inline-block;margin-bottom:22px}
+  .cta .over{display:inline-block;margin-bottom:22px}
   .cta h2{font-family:var(--serif);font-weight:300;font-size:clamp(36px,4.6vw,62px);line-height:1.02;letter-spacing:-.02em;max-width:16ch;margin:0 auto 22px}
   .cta h2 em{font-style:italic;color:var(--terra)}
   .cta p{max-width:48ch;margin:0 auto 38px;color:var(--ink-soft);font-weight:300;font-size:17px;line-height:1.65}
@@ -274,68 +239,59 @@
   .subscribe button{background:transparent;border:none;cursor:pointer;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--ink);padding:14px 0;font-family:var(--sans)}
   .subscribe button:hover{color:var(--terra)}
 
-  /* ---- footer ---- */
+  /* FOOTER */
   footer{background:var(--ink);color:var(--bg);padding:80px 0 36px}
-  .foot-top{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:50px;padding-bottom:60px;border-bottom:1px solid rgba(243,239,230,.14)}
+  .foot-top{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:50px;padding-bottom:60px;border-bottom:1px solid rgba(244,241,232,.14)}
   .foot-brand{display:flex;flex-direction:column;gap:18px}
-  .foot-brand .brand{color:var(--bg)}
-  .foot-brand .brand svg{stroke:var(--bg)}
-  .foot-brand p{color:rgba(243,239,230,.6);font-weight:300;font-size:14px;max-width:34ch;line-height:1.6}
-  .foot-col h5{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:rgba(243,239,230,.5);margin-bottom:18px;font-weight:500}
-  .foot-col a{display:block;font-size:14px;color:rgba(243,239,230,.82);padding:6px 0;font-weight:300;transition:color .3s}
-  .foot-col a:hover{color:#D98A66}
+  .foot-brand .brand{color:var(--bg)}.foot-brand .brand svg{stroke:var(--bg)}
+  .foot-brand p{color:rgba(244,241,232,.6);font-weight:300;font-size:14px;max-width:34ch;line-height:1.6}
+  .foot-col h5{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:rgba(244,241,232,.5);margin-bottom:18px;font-weight:500}
+  .foot-col a{display:block;font-size:14px;color:rgba(244,241,232,.82);padding:6px 0;font-weight:300;transition:color .3s}
+  .foot-col a:hover{color:#E8B65A}
   .foot-bot{display:flex;justify-content:space-between;align-items:center;padding-top:28px;flex-wrap:wrap;gap:14px}
-  .foot-bot p{font-size:12px;color:rgba(243,239,230,.5);letter-spacing:.02em}
+  .foot-bot p{font-size:12px;color:rgba(244,241,232,.5)}
   .foot-bot .socials{display:flex;gap:22px}
-  .foot-bot .socials a{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:rgba(243,239,230,.6)}
-  .foot-bot .socials a:hover{color:#D98A66}
+  .foot-bot .socials a{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:rgba(244,241,232,.6)}
+  .foot-bot .socials a:hover{color:#E8B65A}
 
-  /* reveal */
   .reveal{opacity:0;transform:translateY(26px);transition:opacity .9s ease,transform .9s cubic-bezier(.2,.8,.2,1)}
   .reveal.in{opacity:1;transform:none}
 
-  /* responsive */
   @media(max-width:980px){
-    .nav{display:none}
-    .burger{display:flex}
-    .hero-grid{grid-template-columns:1fr;gap:40px}
-    .hero-meta{display:none}
-    .scroll-cue{display:none}
-    .manifesto .wrap,.problem .wrap,.material .wrap{grid-template-columns:1fr;gap:48px}
-    .steps{grid-template-columns:1fr 1fr}
-    .step{border-right:none;border-bottom:1px solid var(--line);padding:32px 20px}
-    .coll-grid{grid-template-columns:1fr 1fr;grid-template-rows:auto}
-    .card.big{grid-row:auto;min-height:340px}
-    .foot-top{grid-template-columns:1fr 1fr;gap:36px}
+    .nav{display:none}.burger{display:flex}
+    .hero-grid{grid-template-columns:1fr;gap:40px}.hero-meta,.scroll-cue{display:none}
+    .manifesto .wrap{grid-template-columns:1fr;gap:48px}
+    .steps{grid-template-columns:1fr 1fr}.step{border-right:none;border-bottom:1px solid var(--line);padding:32px 20px}
+    .cards{grid-template-columns:1fr 1fr}
+    .honey-wrap,.perfume-wrap{grid-template-columns:1fr;gap:32px}
+    .fire-meter{display:none}.fire-content{max-width:90%}
+    .foot-top{grid-template-columns:1fr 1fr;gap:36px}.cat-num{top:40px;right:32px}
+    .serve-facts{grid-template-columns:1fr 1fr}
   }
   @media(max-width:600px){
-    .wrap{padding:0 22px}
-    .steps{grid-template-columns:1fr}
-    .coll-grid{grid-template-columns:1fr}
-    .foot-top{grid-template-columns:1fr}
-    .problem-figure{display:none}
+    .wrap{padding:0 22px}.steps{grid-template-columns:1fr}.foot-top{grid-template-columns:1fr}
+    .cards{grid-template-columns:1fr}.serve-facts{grid-template-columns:1fr}
   }
 </style>
 </head>
 <body>
 
-<!-- TOP BAR -->
 <header class="topbar" id="topbar">
   <div class="wrap">
     <a href="#" class="brand">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.1">
-        <path d="M12 2 L12 22"/><path d="M12 4 L7 8 M12 4 L17 8"/><path d="M12 9 L6 14 M12 9 L18 14"/><path d="M12 14 L5 19 M12 14 L19 19"/>
-      </svg>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.1"><path d="M12 2 L12 22"/><path d="M12 4 L7 8 M12 4 L17 8"/><path d="M12 9 L6 14 M12 9 L18 14"/><path d="M12 14 L5 19 M12 14 L19 19"/></svg>
       Himalayan Pine Co.
     </a>
     <nav class="nav">
       <a href="#story">The Story</a>
-      <a href="#material">Material</a>
-      <a href="#collections">Collections</a>
-      <a href="#impact">Impact</a>
+      <a href="#fire">The Fire</a>
+      <a href="#drinkware">Drinkware</a>
+      <a href="#serveware">Serveware</a>
+      <a href="#honey">Honey</a>
+      <a href="#perfume">Perfume</a>
       <a href="#cta" class="nav-cta">Shop</a>
     </nav>
-    <div class="burger" onclick="document.body.classList.toggle('menu-open')"><span></span><span></span><span></span></div>
+    <div class="burger"><span></span><span></span><span></span></div>
   </div>
 </header>
 
@@ -343,59 +299,39 @@
 <section class="hero" id="hero">
   <div class="hero-art" aria-hidden="true">
     <svg viewBox="0 0 1600 900" preserveAspectRatio="xMidYMid slice">
-      <defs>
-        <linearGradient id="hg" x1="0" y1="0" x2="0" y2="1">
-          <stop offset="0" stop-color="#E9E1CE"/><stop offset="1" stop-color="#F3EFE6"/>
-        </linearGradient>
-      </defs>
+      <defs><linearGradient id="hg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#E9E1CE"/><stop offset="1" stop-color="#F4F1E8"/></linearGradient></defs>
       <rect width="1600" height="900" fill="url(#hg)"/>
-      <!-- pine needle sprays -->
-      <g stroke="#5E6249" stroke-width="1.1" fill="none" opacity=".5">
-        <g transform="translate(1180,120) rotate(18)">
-          <path d="M0 0 L-120 360"/><path d="M0 0 L-150 340"/><path d="M0 0 L-90 380"/><path d="M0 0 L-170 320"/><path d="M0 0 L-60 390"/>
-        </g>
-        <g transform="translate(1320,200) rotate(-10)">
-          <path d="M0 0 L130 420"/><path d="M0 0 L90 440"/><path d="M0 0 L160 400"/><path d="M0 0 L60 460"/>
-        </g>
-        <g transform="translate(220,520) rotate(8)">
-          <path d="M0 0 L-140 380"/><path d="M0 0 L-100 400"/><path d="M0 0 L-170 360"/><path d="M0 0 L-70 420"/>
-        </g>
-        <g transform="translate(380,300) rotate(-22)">
-          <path d="M0 0 L150 400"/><path d="M0 0 L110 420"/><path d="M0 0 L180 380"/>
-        </g>
+      <g stroke="#5E6E4F" stroke-width="1.1" fill="none" opacity=".55">
+        <g transform="translate(1180,120) rotate(18)"><path d="M0 0 L-120 360"/><path d="M0 0 L-150 340"/><path d="M0 0 L-90 380"/><path d="M0 0 L-170 320"/><path d="M0 0 L-60 390"/></g>
+        <g transform="translate(1320,200) rotate(-10)"><path d="M0 0 L130 420"/><path d="M0 0 L90 440"/><path d="M0 0 L160 400"/><path d="M0 0 L60 460"/></g>
+        <g transform="translate(220,520) rotate(8)"><path d="M0 0 L-140 380"/><path d="M0 0 L-100 400"/><path d="M0 0 L-170 360"/><path d="M0 0 L-70 420"/></g>
+        <g transform="translate(380,300) rotate(-22)"><path d="M0 0 L150 400"/><path d="M0 0 L110 420"/><path d="M0 0 L180 380"/></g>
       </g>
-      <g stroke="#A85A3C" stroke-width="1" fill="none" opacity=".18">
-        <g transform="translate(900,180) rotate(24)">
-          <path d="M0 0 L-110 320"/><path d="M0 0 L-140 300"/><path d="M0 0 L-80 340"/>
-        </g>
-      </g>
+      <g stroke="#B05A36" stroke-width="1" fill="none" opacity=".2"><g transform="translate(900,180) rotate(24)"><path d="M0 0 L-110 320"/><path d="M0 0 L-140 300"/><path d="M0 0 L-80 340"/></g></g>
     </svg>
   </div>
-
   <div class="hero-veil" aria-hidden="true"></div>
-
   <div class="wrap">
     <div class="hero-grid">
       <div>
         <div class="eyebrow-row reveal"><span class="num">01</span><span class="line"></span><span class="over">Dharamshala · Est. 2024</span></div>
-        <h1 class="display reveal" style="transition-delay:.05s">Objects from the <em>forest floor</em>, not the factory.</h1>
+        <h1 class="display reveal" style="transition-delay:.05s">From forest to <em>form</em>. The cup that puts a fire out.</h1>
       </div>
       <div class="hero-side reveal" style="transition-delay:.15s">
-        <p>We gather fallen Himalayan pine needles — the leading cause of forest fires — and press them into unbreakable, plastic-free tableware, raw mountain honey and botanical perfume.</p>
+        <p>We gather fallen Himalayan pine needles — the leading cause of forest fires — and press them into unbreakable, plastic-free drinkware, serveware, raw honey and botanical perfume.</p>
         <div class="hero-actions">
-          <a href="#collections" class="btn btn-solid">Explore Collections</a>
-          <a href="#story" class="btn btn-line">Read the story →</a>
+          <a href="#drinkware" class="btn btn-solid">Explore the Catalogue</a>
+          <a href="#fire" class="btn btn-line">Watch it burn out →</a>
         </div>
       </div>
     </div>
   </div>
-
   <div class="hero-meta">
     <div><span class="v">100%</span><span class="k">Plastic-free</span></div>
     <div><span class="v">2024</span><span class="k">Founded · Dharamshala</span></div>
     <div><span class="v">0</span><span class="k">Trees cut</span></div>
   </div>
-  <div class="scroll-cue">Scroll</div>
+  <div class="scroll-cue">Scroll to put it out</div>
 </section>
 
 <!-- MARQUEE -->
@@ -406,7 +342,7 @@
   </div>
 </div>
 
-<!-- MANIFESTO / STORY -->
+<!-- MANIFESTO -->
 <section class="sec manifesto" id="story">
   <div class="wrap">
     <div class="reveal">
@@ -416,51 +352,93 @@
     <div class="manifesto-body reveal" style="transition-delay:.1s">
       <p>Every summer, the Chir pines of Himachal shed millions of tonnes of dry needles. Rich in resin and slow to decompose, they blanket the forest floor and become kindling — the single largest cause of the wildfires that ravage the Himalayan foothills each year.</p>
       <p>Abhinav Talwar grew up watching those fires. He understood that the only way to stop them was to clear the floor of its fuel — and that the only way to do that, year after year, was to give the needles a worth of their own.</p>
-      <p>So we collect them. By hand. Together with the women's collectives — the Mahila Mandals — of the Kangra valley, we walk the forests before the fire season and gather what the trees let fall. Then, through a patented process bound with limestone and clay, we press those needles into objects that are quiet, durable and entirely free of plastic.</p>
+      <p>So we collect them. By hand. Together with the women's collectives — the Mahila Mandals — of the Kangra valley, we walk the forests before fire season and gather what the trees let fall. Then, through a patented process bound with limestone and clay, we press those needles into objects that are quiet, durable and entirely free of plastic.</p>
       <p>Nothing is cut. Nothing is mined for oil. A problem is lifted from the mountain, and a vessel is put in your hand.</p>
       <div class="sig">Abhinav Talwar<small>Founder · Climatepreneur</small></div>
     </div>
   </div>
 </section>
 
-<!-- PROBLEM / DARK -->
-<section class="sec problem" id="impact">
-  <div class="wrap">
-    <div class="reveal">
-      <div class="eyebrow-row"><span class="num">03</span><span class="line"></span><span class="over" style="color:rgba(243,239,230,.55)">Why it matters</span></div>
-      <h2>Every cup is a <em>fire</em> that didn't happen.</h2>
-      <p>Removing pine needles from the forest floor is the most direct intervention against wildfire. By choosing a vessel made of them, you fund the hands that clear the mountain — and displace the plastic that would have outlived you.</p>
-      <div class="stat-row">
-        <div class="stat"><div class="v">5M+</div><div class="k">Tonnes of needles shed annually in Himachal</div></div>
-        <div class="stat"><div class="v">1:1</div><div class="k">Kilos cleared per object, roughly</div></div>
-        <div class="stat"><div class="v">0</div><div class="k">Plastic, by design</div></div>
-      </div>
+<!-- FIRE SCROLL SECTION -->
+<section class="fire" id="fire">
+  <div class="fire-sticky">
+    <div class="fire-bg" aria-hidden="true">
+      <img src="assets/forest-burnt.jpg" alt="" />
+      <div class="scorch"></div>
     </div>
-    <div class="problem-figure reveal" style="transition-delay:.12s">
-      <svg viewBox="0 0 400 500" preserveAspectRatio="xMidYMid slice">
+    <div class="fire-cleared" id="fireCleared" aria-hidden="true">
+      <svg viewBox="0 0 1600 420" preserveAspectRatio="xMidYMax slice">
+        <path d="M0 420 L0 280 Q200 210 380 270 Q520 320 700 250 Q880 180 1060 260 Q1240 330 1420 270 Q1540 240 1600 260 L1600 420 Z" fill="#2E3D2A"/>
+        <path d="M0 420 L0 340 Q220 280 420 320 Q620 360 820 300 Q1000 250 1200 310 Q1400 360 1600 320 L1600 420 Z" fill="#1F2A24"/>
+        <g stroke="#7C8F6A" stroke-width="1.1" fill="none" opacity=".8">
+          <path d="M120 330 L120 250 M120 280 L100 300 M120 280 L140 300"/>
+          <path d="M320 330 L320 240 M320 270 L300 290 M320 270 L340 290"/>
+          <path d="M520 330 L520 230 M520 260 L500 280 M520 260 L540 280"/>
+          <path d="M760 320 L760 245 M760 275 L740 295 M760 275 L780 295"/>
+          <path d="M980 330 L980 250 M980 280 L960 300 M980 280 L1000 300"/>
+          <path d="M1200 330 L1200 255 M1200 285 L1180 305 M1200 285 L1220 305"/>
+          <path d="M1420 330 L1420 250 M1420 280 L1400 300 M1420 280 L1440 300"/>
+        </g>
+      </svg>
+    </div>
+    <div class="ground" aria-hidden="true"></div>
+
+    <div class="flames" id="flames" aria-hidden="true">
+      <svg viewBox="0 0 1600 620" preserveAspectRatio="none">
         <defs>
-          <radialGradient id="pg" cx="50%" cy="35%" r="70%">
-            <stop offset="0" stop-color="#3A332B"/><stop offset="1" stop-color="#241F1A"/>
+          <linearGradient id="flameGrad" x1="0" y1="1" x2="0" y2="0">
+            <stop offset="0" stop-color="#D4541E"/><stop offset=".35" stop-color="#F2A65A"/>
+            <stop offset=".7" stop-color="#FFD37A"/><stop offset="1" stop-color="#FFEFC0" stop-opacity=".6"/>
+          </linearGradient>
+          <radialGradient id="flameGlow" cx="50%" cy="100%" r="60%">
+            <stop offset="0" stop-color="#FFD37A" stop-opacity=".55"/><stop offset="1" stop-color="#FFD37A" stop-opacity="0"/>
           </radialGradient>
         </defs>
-        <rect width="400" height="500" fill="url(#pg)"/>
-        <g stroke="#D98A66" stroke-width="1" fill="none" opacity=".55">
-          <path d="M200 60 L160 460 M200 60 L240 460 M200 60 L180 460 M200 60 L220 460"/>
+        <ellipse cx="800" cy="620" rx="900" ry="320" fill="url(#flameGlow)"/>
+        <g class="tongue" fill="url(#flameGrad)">
+          <path d="M120 620 C120 520 90 470 110 360 C130 300 150 240 130 180 C150 220 170 280 170 340 C190 300 180 420 150 470 C150 540 140 580 120 620 Z"/>
         </g>
-        <g stroke="#F3EFE6" stroke-width=".8" fill="none" opacity=".25">
-          <path d="M70 120 L120 470 M70 120 L100 480 M70 120 L140 460"/>
-          <path d="M330 100 L300 470 M330 100 L350 475 M330 100 L280 465"/>
-          <path d="M60 300 L110 490 M340 280 L300 490"/>
+        <g class="tongue" fill="url(#flameGrad)">
+          <path d="M300 620 C300 540 260 480 280 400 C260 330 300 260 290 200 C320 260 330 320 330 380 C360 330 350 460 320 520 C320 560 310 600 300 620 Z"/>
         </g>
-        <circle cx="200" cy="240" r="120" fill="none" stroke="#D98A66" stroke-width=".8" opacity=".3"/>
-        <circle cx="200" cy="240" r="60" fill="none" stroke="#D98A66" stroke-width=".8" opacity=".4"/>
+        <g class="tongue" fill="url(#flameGrad)">
+          <path d="M520 620 C520 500 480 440 500 340 C480 270 530 200 510 140 C550 210 560 280 560 360 C590 300 580 440 540 500 C540 560 530 600 520 620 Z"/>
+        </g>
+        <g class="tongue" fill="url(#flameGrad)">
+          <path d="M760 620 C760 520 720 460 740 360 C720 300 770 240 750 180 C800 250 800 320 800 390 C830 330 820 470 780 530 C780 570 770 600 760 620 Z"/>
+        </g>
+        <g class="tongue" fill="url(#flameGrad)">
+          <path d="M1000 620 C1000 510 960 450 980 350 C960 280 1010 210 990 150 C1030 220 1040 290 1040 370 C1070 310 1060 450 1020 510 C1020 560 1010 600 1000 620 Z"/>
+        </g>
+        <g class="tongue" fill="url(#flameGrad)">
+          <path d="M1240 620 C1240 530 1200 470 1220 380 C1200 310 1250 250 1230 190 C1270 260 1280 330 1280 400 C1310 350 1300 480 1260 540 C1260 580 1250 600 1240 620 Z"/>
+        </g>
+        <g class="tongue" fill="url(#flameGrad)">
+          <path d="M1460 620 C1460 520 1420 460 1440 360 C1420 300 1470 240 1450 180 C1490 250 1490 320 1490 390 C1520 340 1510 470 1470 530 C1470 570 1460 600 1460 620 Z"/>
+        </g>
       </svg>
+    </div>
+
+    <div class="embers-bed" id="embersBed" aria-hidden="true"></div>
+    <div class="embers" id="embers" aria-hidden="true"></div>
+
+    <div class="fire-content">
+      <div class="over">03 · Why it matters</div>
+      <h2>Every cup is a <em>fire</em> that didn't happen.</h2>
+      <p>Scroll down slowly. Watch the fire on the forest floor die as the needles are lifted — cleared by hand, kilo by kilo. This is the work your purchase funds: the most direct intervention against Himalayan wildfire.</p>
+      <p id="fireEnd" style="margin-top:22px;font-family:var(--serif);font-style:italic;font-size:18px;color:#B9D49E;opacity:0;transition:opacity .6s ease">The floor is cleared. The forest breathes. One cup at a time.</p>
+    </div>
+    <div class="fire-meter">
+      <span class="out" id="firePct">100%</span>
+      <div class="track"><div class="fill" id="fireFill"></div></div>
+      <span class="label">Fire remaining</span>
+      <span class="cap" id="fireCap">Burning</span>
     </div>
   </div>
 </section>
 
 <!-- PROCESS -->
-<section class="sec process" id="material">
+<section class="sec process">
   <div class="wrap">
     <div class="reveal">
       <div class="eyebrow-row"><span class="num">04</span><span class="line"></span><span class="over">From needle to object</span></div>
@@ -470,160 +448,180 @@
     <div class="steps">
       <div class="step reveal">
         <div class="ico"><svg viewBox="0 0 48 48"><path d="M24 6 L24 30 M24 12 L16 20 M24 12 L32 20 M24 20 L14 30 M24 20 L34 30 M18 38 C18 42 30 42 30 38"/></svg></div>
-        <div class="n">01</div>
-        <h3>Gathered</h3>
-        <p>Before fire season, Mahila Mandals hand-pick fallen needles from the forest floor — clearing the mountain as they work.</p>
+        <div class="n">01</div><h3>Gathered</h3><p>Before fire season, Mahila Mandals hand-pick fallen needles from the forest floor — clearing the mountain as they work.</p>
       </div>
       <div class="step reveal" style="transition-delay:.08s">
         <div class="ico"><svg viewBox="0 0 48 48"><path d="M10 14 L38 14 L34 40 L14 40 Z M16 14 C16 8 32 8 32 14"/></svg></div>
-        <div class="n">02</div>
-        <h3>Bound</h3>
-        <p>Needles are combined with natural limestone and clay — never resin glues — and prepared for moulding.</p>
+        <div class="n">02</div><h3>Bound</h3><p>Needles are combined with natural limestone and clay — never resin glues — and prepared for moulding.</p>
       </div>
       <div class="step reveal" style="transition-delay:.16s">
         <div class="ico"><svg viewBox="0 0 48 48"><rect x="12" y="14" width="24" height="22" rx="3"/><path d="M12 22 L36 22 M24 14 L24 36"/></svg></div>
-        <div class="n">03</div>
-        <h3>Pressed</h3>
-        <p>A patented injection process forms each vessel, extinguishing flammability while keeping natural antimicrobial qualities.</p>
+        <div class="n">03</div><h3>Pressed</h3><p>A patented injection process forms each vessel, extinguishing flammability while keeping natural antimicrobial qualities.</p>
       </div>
       <div class="step reveal" style="transition-delay:.24s">
         <div class="ico"><svg viewBox="0 0 48 48"><path d="M14 16 L14 36 C14 40 34 40 34 36 L34 16 Z M24 16 L24 36 M14 24 L34 24"/></svg></div>
-        <div class="n">04</div>
-        <h3>Kept</h3>
-        <p>Lightweight, unbreakable, microwave-safe — made to be used daily and to return to the earth when finally done.</p>
+        <div class="n">04</div><h3>Kept</h3><p>Lightweight, unbreakable, microwave-safe — made to be used daily and to return to the earth when finally done.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- COLLECTIONS -->
-<section class="sec collections" id="collections">
+<!-- CAT 1 — DRINKWARE -->
+<section class="cat cat-drink" id="drinkware">
+  <span class="cat-num"><span class="line"></span>Collection I</span>
   <div class="wrap">
-    <div class="coll-head reveal">
-      <div>
-        <div class="eyebrow-row"><span class="num">05</span><span class="line"></span><span class="over">Collections</span></div>
-        <h2>Three lines, one mountain.</h2>
-      </div>
-      <p>Tableware pressed from pine. Honey gathered from the same forests. Perfume drawn from the botanicals that grow between them.</p>
+    <div class="cat-head reveal">
+      <h2>Drinkware, <em>unbreakable</em> by nature.</h2>
+      <p class="lede">Chai cups, sippers and wine glasses pressed from pine — matte, light, microwave-safe. Built to outlive the kitchen.</p>
     </div>
-    <div class="coll-grid">
-      <!-- big -->
-      <article class="card big reveal">
-        <div class="ph" aria-hidden="true">
-          <svg viewBox="0 0 600 700" preserveAspectRatio="xMidYMid slice">
-            <rect width="600" height="700" fill="#3B4133"/>
-            <ellipse cx="300" cy="470" rx="200" ry="40" fill="#2A2E24"/>
-            <path d="M210 470 Q210 300 300 280 Q390 300 390 470 Z" fill="#6E7156"/>
-            <path d="M230 470 Q230 320 300 305 Q370 320 370 470 Z" fill="#7C8063"/>
-            <ellipse cx="300" cy="300" rx="70" ry="18" fill="#8A8E70"/>
-            <path d="M250 300 Q300 250 350 300" fill="none" stroke="#3B4133" stroke-width="2"/>
-          </svg>
+    <div class="cards">
+      <div class="pcard reveal">
+        <div class="pic"><img src="assets/drinkware-wine.jpg" alt="Pine needle wine glass" /></div>
+        <div class="shade"></div>
+        <span class="price">₹599</span>
+        <div class="ct"><span class="over">Pine Composite</span><h4>Pine Needle Wine Glass</h4><p>Charcoal grey · 250ml · set of 2</p></div>
+      </div>
+      <div class="pcard reveal" style="transition-delay:.06s">
+        <div class="pic" aria-hidden="true">
+          <svg viewBox="0 0 400 400" preserveAspectRatio="xMidYMid slice"><rect width="400" height="400" fill="#E9E4D4"/>
+          <g stroke="#5E6E4F" stroke-width="2" fill="none">
+            <ellipse cx="200" cy="150" rx="70" ry="18" fill="#EDE7D6"/>
+            <path d="M170 150 L180 320 Q200 350 220 320 L230 150" fill="#EDE7D6"/>
+            <ellipse cx="200" cy="350" rx="50" ry="12" fill="#DDD5BF"/>
+          </g></svg>
         </div>
         <div class="shade"></div>
-        <span class="price">from ₹1,200</span>
-        <div class="ct">
-          <span class="over">Pine Composite</span>
-          <h3>The Eco Chai Cup</h3>
-          <p>Unbreakable, microwave-safe chai cups in sage, beige and charcoal. Sold in sets of six. The cup that outlives the kitchen.</p>
-          <a class="link" href="#">View tableware →</a>
-        </div>
-      </article>
-
-      <article class="card reveal" style="transition-delay:.08s">
-        <div class="ph" aria-hidden="true">
-          <svg viewBox="0 0 500 500" preserveAspectRatio="xMidYMid slice">
-            <rect width="500" height="500" fill="#7A4A28"/>
-            <rect x="180" y="160" width="140" height="220" rx="14" fill="#C8862E"/>
-            <rect x="180" y="150" width="140" height="26" rx="8" fill="#8A5A1E"/>
-            <rect x="150" y="140" width="200" height="18" rx="9" fill="#6E451E"/>
-            <path d="M210 360 Q250 380 290 360" stroke="#E8B65A" stroke-width="6" fill="none"/>
-          </svg>
+        <span class="price">₹999</span>
+        <div class="ct"><span class="over">Pine Composite</span><h4>Eco Chai Cutting Cups</h4><p>Pack of 6 · sage & beige</p></div>
+      </div>
+      <div class="pcard reveal" style="transition-delay:.12s">
+        <div class="pic" aria-hidden="true">
+          <svg viewBox="0 0 400 400" preserveAspectRatio="xMidYMid slice"><rect width="400" height="400" fill="#D9D2BF"/>
+          <g stroke="#33403A" stroke-width="2" fill="#3A463C">
+            <rect x="170" y="150" width="60" height="170" rx="28"/>
+            <rect x="160" y="140" width="80" height="20" rx="10"/>
+            <path d="M180 320 Q200 345 220 320" fill="none" stroke="#33403A"/>
+          </g></svg>
         </div>
         <div class="shade"></div>
-        <span class="price">₹650</span>
-        <div class="ct">
-          <span class="over">Raw · Unfiltered</span>
-          <h3>Wild Forest Honey</h3>
-          <p>Wild forest, multiflora, rosewood reserve and berry blossom.</p>
-          <a class="link" href="#">Taste the forest →</a>
-        </div>
-      </article>
-
-      <article class="card reveal" style="transition-delay:.16s">
-        <div class="ph" aria-hidden="true">
-          <svg viewBox="0 0 500 500" preserveAspectRatio="xMidYMid slice">
-            <rect width="500" height="500" fill="#2A2622"/>
-            <rect x="210" y="170" width="80" height="220" rx="40" fill="#D9C7A3"/>
-            <rect x="220" y="150" width="60" height="40" rx="20" fill="#B5A785"/>
-            <rect x="235" y="120" width="30" height="40" rx="10" fill="#9C8F70"/>
-          </svg>
-        </div>
-        <div class="shade"></div>
-        <span class="price">₹950</span>
-        <div class="ct">
-          <span class="over">Botanical · 10ml</span>
-          <h3>Intime Roll-On</h3>
-          <p>A roll-on perfume from Himalayan botanicals and essential oils.</p>
-          <a class="link" href="#">Discover scent →</a>
-        </div>
-      </article>
-
-      <article class="card reveal" style="transition-delay:.24s" style="grid-column:span 2;">
-        <div class="ph" aria-hidden="true">
-          <svg viewBox="0 0 1000 500" preserveAspectRatio="xMidYMid slice">
-            <rect width="1000" height="500" fill="#4A5040"/>
-            <ellipse cx="320" cy="360" rx="120" ry="24" fill="#363B2E"/>
-            <path d="M250 360 Q250 220 320 210 Q390 220 390 360 Z" fill="#7C8063"/>
-            <ellipse cx="320" cy="215" rx="70" ry="16" fill="#8A8E70"/>
-            <ellipse cx="680" cy="370" rx="90" ry="18" fill="#363B2E"/>
-            <path d="M630 370 Q630 280 680 272 Q730 280 730 370 Z" fill="#8A8E70"/>
-            <ellipse cx="680" cy="275" rx="50" ry="12" fill="#9A9E82"/>
-          </svg>
-        </div>
-        <div class="shade"></div>
-        <span class="price">from ₹3,400</span>
-        <div class="ct">
-          <span class="over">Sage Luxe</span>
-          <h3>Nibble Bowls & Serving Platters</h3>
-          <p>Lightweight serveware that replaces melamine and outlives ceramic. Built for everyday hosting.</p>
-          <a class="link" href="#">Shop serveware →</a>
-        </div>
-      </article>
+        <span class="price">₹599</span>
+        <div class="ct"><span class="over">Pine Composite</span><h4>Small Sipper</h4><p>Charcoal · 300ml · with lid</p></div>
+      </div>
+    </div>
+    <div class="pills reveal">
+      <span class="pill">Eco Chai Cups</span><span class="pill">Coffee Mugs</span><span class="pill">Engraved Quote Mugs</span><span class="pill">Sippers</span><span class="pill">Wine Glasses</span>
     </div>
   </div>
 </section>
 
-<!-- MATERIAL / VALUES -->
-<section class="sec material">
+<!-- CAT 2 — SERVEWARE -->
+<section class="cat cat-serve" id="serveware">
+  <span class="cat-num"><span class="line"></span>Collection II</span>
   <div class="wrap">
-    <div class="mat-art reveal">
-      <svg viewBox="0 0 500 550" preserveAspectRatio="xMidYMid slice">
-        <rect width="500" height="550" fill="#FBF8F1"/>
-        <g stroke="#241F1A" stroke-width="1" fill="none">
-          <path d="M250 60 L210 490 M250 60 L290 490 M250 60 L230 490 M250 60 L270 490"/>
-        </g>
-        <g stroke="#A85A3C" stroke-width=".8" fill="none" opacity=".6">
-          <path d="M120 100 L90 470 M120 100 L150 470 M380 90 L350 470 M380 90 L410 470"/>
-        </g>
-        <circle cx="250" cy="280" r="150" fill="none" stroke="#241F1A" stroke-width=".6" opacity=".2"/>
-        <text x="250" y="535" text-anchor="middle" font-family="Fraunces, serif" font-style="italic" font-size="16" fill="#7C7367">pinus roxburghii</text>
-      </svg>
+    <div class="cat-head reveal">
+      <h2>Serveware for the <em>quiet</em> table.</h2>
+      <p class="lede">Nibble bowls, thalis and platters — light to hold, calm to look at. A genuine alternative to melamine and ceramic.</p>
     </div>
-    <div class="reveal" style="transition-delay:.1s">
-      <div class="eyebrow-row"><span class="num">06</span><span class="line"></span><span class="over">The Material</span></div>
-      <h2>One ingredient, <em>honestly</em> named.</h2>
-      <p class="intro">Chir pine needles, limestone and clay. That is the whole recipe. No petrochemical binders, no greenwashed mystery compounds — only what the mountain already provides.</p>
-      <div class="vals">
-        <div class="val"><span class="vn">01</span><div><h4>Unbreakable</h4><p>Built for the daily drop, the careless tap, the child's hand. No more ceramic shards.</p></div></div>
-        <div class="val"><span class="vn">02</span><div><h4>Microwave safe</h4><p>Reheat without a second thought — the composite holds up where plastic warps.</p></div></div>
-        <div class="val"><span class="vn">03</span><div><h4>Naturally antimicrobial</h4><p>The pine's own defences survive the process, keeping surfaces quietly clean.</p></div></div>
-        <div class="val"><span class="vn">04</span><div><h4>Biodegradable</h4><p>When a vessel finally retires, it returns to soil — not to a landfill for centuries.</p></div></div>
+    <div class="cards">
+      <div class="pcard reveal">
+        <div class="pic" aria-hidden="true"><svg viewBox="0 0 400 400" preserveAspectRatio="xMidYMid slice"><rect width="400" height="400" fill="#0d3a42"/>
+          <g stroke="#8FA8AD" stroke-width="2" fill="#3a5e66">
+            <ellipse cx="200" cy="240" rx="120" ry="40"/><ellipse cx="200" cy="232" rx="120" ry="34" fill="#476A72"/>
+            <ellipse cx="200" cy="232" rx="90" ry="22" fill="#2C4A52"/></g></svg>
+        </div>
+        <div class="shade"></div>
+        <span class="price">₹1,999</span>
+        <div class="ct"><span class="over">Sage Luxe</span><h4>Nibble Bowls</h4><p>Pack of 6 · sage green</p></div>
+      </div>
+      <div class="pcard reveal" style="transition-delay:.06s">
+        <div class="pic" aria-hidden="true"><svg viewBox="0 0 400 400" preserveAspectRatio="xMidYMid slice"><rect width="400" height="400" fill="#0d3a42"/>
+          <g stroke="#8FA8AD" stroke-width="2" fill="#476A72">
+            <ellipse cx="200" cy="210" rx="130" ry="22"/><rect x="70" y="210" width="260" height="20" fill="#3a5e66"/>
+            <ellipse cx="200" cy="230" rx="130" ry="20" fill="#2C4A52"/></g></svg>
+        </div>
+        <div class="shade"></div>
+        <span class="price">₹1,999</span>
+        <div class="ct"><span class="over">Sage Luxe</span><h4>Serving Platters</h4><p>Pack of 4 · charcoal</p></div>
+      </div>
+      <div class="pcard reveal" style="transition-delay:.12s">
+        <div class="pic" aria-hidden="true"><svg viewBox="0 0 400 400" preserveAspectRatio="xMidYMid slice"><rect width="400" height="400" fill="#0d3a42"/>
+          <g stroke="#8FA8AD" stroke-width="2" fill="#476A72"><circle cx="200" cy="220" r="110"/>
+            <circle cx="200" cy="220" r="82" fill="#2C4A52"/></g></svg>
+        </div>
+        <div class="shade"></div>
+        <span class="price">₹1,499</span>
+        <div class="ct"><span class="over">Sage Luxe</span><h4>Modern Thali</h4><p>Single · sage</p></div>
+      </div>
+    </div>
+    <div class="serve-facts reveal">
+      <div><h5>Lightweight</h5><p>Half the weight of ceramic, none of the fragility.</p></div>
+      <div><h5>Washable</h5><p>Completely washable, dishwasher-tolerant.</p></div>
+      <div><h5>Textured</h5><p>The natural grain of pine shows through.</p></div>
+      <div><h5>Biodegradable</h5><p>Returns to soil when finally retired.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- CAT 3 — HONEY -->
+<section class="cat cat-honey" id="honey">
+  <span class="cat-num"><span class="line"></span>Collection III</span>
+  <div class="wrap">
+    <div class="honey-wrap">
+      <div class="honey-visual reveal">
+        <span class="tag">Raw · Unfiltered</span>
+        <div class="jar"><svg viewBox="0 0 160 200"><defs><linearGradient id="hny" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#F2C879"/><stop offset=".4" stop-color="#E8A14A"/><stop offset="1" stop-color="#B6751E"/></linearGradient></defs>
+          <rect x="48" y="20" width="64" height="22" rx="4" fill="#7A5530"/>
+          <rect x="40" y="42" width="80" height="14" rx="4" fill="#9C7547"/>
+          <path d="M40 56 L120 56 L124 176 Q120 188 80 188 Q40 188 36 176 Z" fill="url(#hny)"/>
+          <ellipse cx="80" cy="60" rx="40" ry="6" fill="#F6DCA0" opacity=".7"/>
+          <rect x="56" y="96" width="48" height="44" fill="#FBF3E0" opacity=".0"/>
+          <text x="80" y="122" text-anchor="middle" font-family="Fraunces, serif" font-style="italic" font-size="13" fill="#7A4A1E">raw honey</text>
+        </svg></div>
+      </div>
+      <div class="reveal" style="transition-delay:.1s">
+        <div class="eyebrow-row"><span class="num">·</span><span class="line"></span><span class="over">From the same forest</span></div>
+        <h2 class="serif" style="font-weight:300;font-size:clamp(32px,3.8vw,50px);letter-spacing:-.02em;line-height:1.05;margin-bottom:18px">Honey, gathered where the <em style="font-style:italic;color:var(--terra)">needles</em> fall.</h2>
+        <p style="color:var(--ink-soft);font-weight:300;font-size:17px;line-height:1.7;margin-bottom:28px;max-width:44ch">Sourced directly from sustainable mountain producers among the same pine forests we help protect. Raw, pure and unfiltered — each jar a different season of the mountain.</p>
+        <div class="honey-list">
+          <div class="honey-item"><span class="hn">i</span><div><h4>Wild Forest Raw Honey</h4><p>Deep, resinous · single-origin Kangra</p></div><span class="price">₹650</span></div>
+          <div class="honey-item"><span class="hn">ii</span><div><h4>Multiflora Harvest Honey</h4><p>Light, floral · spring meadow</p></div><span class="price">₹599</span></div>
+          <div class="honey-item"><span class="hn">iii</span><div><h4>Rosewood Reserve Honey</h4><p>Aged, amber · limited harvest</p></div><span class="price">₹799</span></div>
+          <div class="honey-item"><span class="hn">iv</span><div><h4>Berry Blossom Honey</h4><p>Bright, fruity · late summer</p></div><span class="price">₹699</span></div>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- IMPACT QUOTE -->
+<!-- CAT 4 — PERFUME -->
+<section class="cat cat-perfume" id="perfume">
+  <span class="cat-num"><span class="line"></span>Collection IV</span>
+  <div class="wrap">
+    <div class="cat-head reveal">
+      <h2>A scent drawn from the <em>botanicals</em> between the pines.</h2>
+      <p class="lede">A single roll-on, hand-blended from Himalayan botanicals and essential oils. No harsh synthetics — only what the mountain grows.</p>
+    </div>
+    <div class="perfume-wrap">
+      <div class="perfume-visual reveal">
+        <div class="bottle"><svg viewBox="0 0 140 240"><defs><linearGradient id="oil" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#D9A86A" stop-opacity=".7"/><stop offset="1" stop-color="#8A5A2E"/></linearGradient></defs>
+          <rect x="58" y="14" width="24" height="30" rx="4" fill="#3A2A1E"/>
+          <rect x="52" y="40" width="36" height="10" rx="3" fill="#5A4530"/>
+          <path d="M52 50 L88 50 L94 210 Q88 226 70 226 Q52 226 46 210 Z" fill="url(#oil)" stroke="#6A4A28" stroke-width="1"/>
+          <ellipse cx="70" cy="54" rx="18" ry="4" fill="#E8C998" opacity=".6"/>
+          <circle cx="70" cy="200" r="3" fill="#FFE0B0" opacity=".8"/>
+        </svg></div>
+      </div>
+      <div class="perfume-notes reveal" style="transition-delay:.1s">
+        <div class="note"><span class="nt">Top</span><div><h4>Pine needle & cold air</h4><p>The first breath — green, resinous, unmistakably mountain.</p></div></div>
+        <div class="note"><span class="nt">Heart</span><div><h4>Wild herbs & rhododendron</h4><p>The middle — soft florals and the herbal edge of a hillside walk.</p></div></div>
+        <div class="note"><span class="nt">Base</span><div><h4>Cedar, amber & skin warmth</h4><p>The dry-down — quiet, warm, close to the body. 10ml roll-on.</p></div></div>
+        <div style="margin-top:18px"><a class="btn btn-solid" style="background:#D9A86A;color:#1A1410" href="#cta">Shop the roll-on · ₹950</a></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- IMPACT -->
 <section class="sec impact">
   <div class="wrap narrow">
     <span class="mark reveal">"</span>
@@ -635,7 +633,7 @@
 <!-- CTA -->
 <section class="cta" id="cta">
   <div class="wrap narrow">
-    <span class="over reveal" style="transition-delay:0s">The Field Journal</span>
+    <span class="over reveal">The Field Journal</span>
     <h2 class="reveal" style="transition-delay:.05s">Notes from the <em>mountain</em>, a few times a season.</h2>
     <p class="reveal" style="transition-delay:.1s">Stories from the forest floor, new collections, and the quiet work of fire-prevention. No noise — only what matters.</p>
     <form class="subscribe reveal" style="transition-delay:.15s" onsubmit="this.reset();return false">
@@ -650,58 +648,79 @@
   <div class="wrap">
     <div class="foot-top">
       <div class="foot-brand">
-        <a href="#" class="brand">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.1">
-            <path d="M12 2 L12 22"/><path d="M12 4 L7 8 M12 4 L17 8"/><path d="M12 9 L6 14 M12 9 L18 14"/><path d="M12 14 L5 19 M12 14 L19 19"/>
-          </svg>
-          Himalayan Pine Co.
-        </a>
+        <a href="#" class="brand"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.1"><path d="M12 2 L12 22"/><path d="M12 4 L7 8 M12 4 L17 8"/><path d="M12 9 L6 14 M12 9 L18 14"/><path d="M12 14 L5 19 M12 14 L19 19"/></svg>Himalayan Pine Co.</a>
         <p>An environmental-engineering brand of Vasshin Composites, turning a forest-fire hazard into objects worth keeping. Headquartered in Dharamshala, Himachal Pradesh.</p>
       </div>
-      <div class="foot-col">
-        <h5>Shop</h5>
-        <a href="#collections">Chai Cups</a>
-        <a href="#collections">Serveware</a>
-        <a href="#collections">Raw Honey</a>
-        <a href="#collections">Botanical Perfume</a>
-        <a href="#collections">Gift Sets</a>
-      </div>
-      <div class="foot-col">
-        <h5>The House</h5>
-        <a href="#story">Our Story</a>
-        <a href="#material">The Material</a>
-        <a href="#impact">Impact</a>
-        <a href="#">Corporate Gifting</a>
-        <a href="#">Café Wholesale</a>
-      </div>
-      <div class="foot-col">
-        <h5>Contact</h5>
-        <a href="mailto:hello@himalayanpine.co">hello@himalayanpine.co</a>
-        <a href="#">Dharamshala, HP</a>
-        <a href="#">Bengaluru, KA</a>
-        <a href="#">Instagram</a>
-      </div>
+      <div class="foot-col"><h5>Shop</h5><a href="#drinkware">Drinkware</a><a href="#serveware">Serveware</a><a href="#honey">Raw Honey</a><a href="#perfume">Botanical Perfume</a><a href="#cta">Gift Sets</a></div>
+      <div class="foot-col"><h5>The House</h5><a href="#story">Our Story</a><a href="#fire">The Fire</a><a href="#">The Material</a><a href="#">Corporate Gifting</a><a href="#">Café Wholesale</a></div>
+      <div class="foot-col"><h5>Contact</h5><a href="mailto:hello@himalayanpine.co">hello@himalayanpine.co</a><a href="#">Dharamshala, HP</a><a href="#">Bengaluru, KA</a><a href="#">Instagram</a></div>
     </div>
     <div class="foot-bot">
       <p>© 2024 Himalayan Pine Co. · A concept redesign for internal review.</p>
-      <div class="socials">
-        <a href="#">Instagram</a><a href="#">Journal</a><a href="#">Press</a>
-      </div>
+      <div class="socials"><a href="#">Instagram</a><a href="#">Journal</a><a href="#">Press</a></div>
     </div>
   </div>
 </footer>
 
 <script>
-  // sticky nav state
   const bar=document.getElementById('topbar');
   const onScroll=()=>bar.classList.toggle('scrolled',window.scrollY>40);
   onScroll();window.addEventListener('scroll',onScroll,{passive:true});
-
-  // reveal on view
-  const io=new IntersectionObserver((es)=>{
-    es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}});
-  },{threshold:.12,rootMargin:'0px 0px -40px 0px'});
+  const io=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}});},{threshold:.12,rootMargin:'0px 0px -40px 0px'});
   document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+
+  // FIRE scroll animation
+  const fireSec=document.getElementById('fire');
+  const flames=document.getElementById('flames');
+  const cleared=document.getElementById('fireCleared');
+  const embersBed=document.getElementById('embersBed');
+  const embersBox=document.getElementById('embers');
+  const fireFill=document.getElementById('fireFill');
+  const firePct=document.getElementById('firePct');
+  const fireCap=document.getElementById('fireCap');
+  const clamp=(v,a,b)=>Math.max(a,Math.min(b,v));
+  const lerp=(a,b,t)=>a+(b-a)*t;
+
+  // spawn ember elements
+  for(let i=0;i<26;i++){
+    const e=document.createElement('span');
+    e.className='ember';
+    e.style.left=(Math.random()*100)+'%';
+    e.style.setProperty('--drift',((Math.random()*60-30))+'px');
+    e.style.animationDuration=(2.4+Math.random()*2.6)+'s';
+    e.style.animationDelay=(-Math.random()*4)+'s';
+    e.style.width=e.style.height=(2+Math.random()*3)+'px';
+    embersBox.appendChild(e);
+  }
+
+  function updateFire(){
+    const rect=fireSec.getBoundingClientRect();
+    const vh=window.innerHeight;
+    const total=fireSec.offsetHeight-vh;
+    const p=clamp((-rect.top)/total,0,1);
+    // flames: full height & bright at p=0, shrink down to embers then out
+    const scaleY=lerp(1,0.12,p);
+    const opacity=lerp(1,0,p*1.15);
+    flames.style.transform='scale(1,'+scaleY+')';
+    flames.style.opacity=clamp(opacity,0,1);
+    // embers bed glows as flames drop, peaks mid, fades at end
+    const bedA=clamp(Math.sin(p*Math.PI)*1.1,0,1)*(1-clamp((p-0.8)/0.2,0,1));
+    embersBed.style.opacity=bedA;
+    // ember particles fade out toward the end
+    embersBox.style.opacity=clamp(1-p*1.3,0,1);
+    // cleared forest rises in at the end
+    cleared.style.opacity=clamp((p-0.62)/0.38,0,1);
+    // meter
+    const remaining=Math.round((1-p)*100);
+    fireFill.style.height=remaining+'%';
+    firePct.textContent=remaining+'%';
+    fireCap.textContent = p<0.08?'Burning':p<0.5?'Subsiding':p<0.92?'Smouldering':'Extinguished';
+    document.getElementById('fireEnd').style.opacity = p>0.9?'1':'0';
+  }
+  let raf;
+  window.addEventListener('scroll',()=>{cancelAnimationFrame(raf);raf=requestAnimationFrame(updateFire)},{passive:true});
+  window.addEventListener('resize',updateFire);
+  updateFire();
 </script>
 </body>
 </html>
